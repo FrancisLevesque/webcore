@@ -6,17 +6,17 @@ html, body {
 	padding: 0;
 	border: 0;
 
-	background-color: black;
+	background-image: url('../images/texture.jpg');
 }
 
 @font-face {
 	font-family: JosefinSansTDH;
-	src: url(JosefinSansTDH.ttf);
+	src: url('../fonts/JosefinSansTDH.ttf');
 }
 
 @font-face {
 	font-family: JosefinSansTDH-Bold;
-	src: url(JosefinSansTDH-Bold.ttf);
+	src: url('../fonts/JosefinSansTDH-Bold.ttf');
 }
 
 a:link {
@@ -44,16 +44,16 @@ a:active {
 
 .bandname {
 	display: inline-block;
-	color: white;
-	text-shadow: 2px 2px 4px #FFF;
-	font-size: 72px;
+	color: black;
+	text-shadow: 5px 5px 8px #444;
+	font-size: 90px;
 	font-family: JosefinSansTDH, Arial, sans-serif;
 }
 
 .sub-text {
 	display: inline-block;
-	color: white;
-	text-shadow: 2px 2px 4px #FFF;
+	color: black;
+	text-shadow: 6px 6px 7px #888;
 	font-weight: 300; 
 	font-size: 36px;
 	font-family: Arial, sans-serif;
