@@ -6,7 +6,11 @@ html, body {
 	padding: 0;
 	border: 0;
 
-	background-image: url('../images/texture.jpg');
+	background-image: url('../images/texture.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 @font-face {
