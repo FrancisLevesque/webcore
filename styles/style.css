@@ -52,7 +52,7 @@ a:active {
 
 .sub-text {
 	display: inline-block;
-	color: black;
+	color: #333;
 	text-shadow: 6px 6px 7px #888;
 	font-weight: 300; 
 	font-size: 36px;
