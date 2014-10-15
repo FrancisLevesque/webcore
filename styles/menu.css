@@ -42,14 +42,14 @@ ul {
 li {
 	display: inline-block;
 	float: left;
-	padding: 8px
+	padding: 16px 8px;
 }
 
 li:hover {
 	background-color: #8A8A8A;
 }
 
-.current {
+#current {
 	background-color: #4A4A4A;
 }
 

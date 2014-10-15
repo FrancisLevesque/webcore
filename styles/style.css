@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html, body {
 	position: relative;
     top: 26px;
@@ -110,13 +115,64 @@ a:link, a:visited, a:hover, a:active {
 ***************************************/
 .blog {
 	background-image: url('img/texture_dark.jpg');
+	padding-top: 40px;
+	padding-bottom: 80px;
 }
+
+.blog h1, p {
+	color: white;
+	text-shadow: 2px 2px 4px #777;
+}
+
+/***************************************
+* Shows Styling
+***************************************/
+.shows_container {
+	display: table;
+	margin: 0 auto;
+}
+
+.show {
+	display: inline-block;
+	padding: 30px 60px;
+}
+
+.show p {
+	display: block;
+	padding: 0;
+	color: black;
+}
+
+/***************************************
+* Bio Styling
+***************************************/
+
+/***************************************
+* Lyrics Styling
+***************************************/
+
+/***************************************
+* Merch Styling
+***************************************/
+
+/***************************************
+* Contact Styling
+***************************************/
 
 /***************************************
 * Footer Styling
 ***************************************/
 .footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 32px;
+	width: 100%;
 	color: white;
 	background: #404040;
-	padding: 26px 0 52px;
+}
+
+.footer div {
+	display: inline;
+	padding-left: 20px;
 }
