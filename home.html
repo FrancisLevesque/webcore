@@ -10,78 +10,52 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/ninja-slider.js"></script>
         <script type="text/javascript" src="scripts/menu.js"></script>
+        <script>
+            $(function(){
+                $(".footer").load("footer.html");
+            });
+        </script>
     </head>
     <body>
-        <header>
-            <a href="#" class="header">THE DISTRICT HEAT</a>
-            <nav>
-                <a id="menu-icon"></a>
-                <ul id="menu">
-                    <li id="current"><a href='home.html'>HOME</a></li>
-                    <li><a href='shows.html'>SHOWS</a></li>
-                    <li><a href='bio.html'>BIO</a></li>
-                    <li><a href='blog.html'>BLOG</a></li>
-                    <li><a href='lyrics.html'>LYRICS</a></li>
-                    <li><a href='merch.html'>MERCH</a></li>
-                    <li><a href='contact.html'>CONTACT</a></li> 
-                </ul>
-            </nav>
-        </header>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/1_75reg1a6c?wmode=transparent" frameborder="0"></iframe>
-        </div>
-        <div class="blog">
-            <h1>WE'RE BACK!</h1>
-            <p>That's right everyone! The Album's finally done and that means we're back! After what seems like an eternity away from the stage (even though it was only a few month) all the paperwork's done, the bills are paid and we're finally ready to just play again!</p>
-            <p>Stay tuned for more shenanigans...</p>
-        </div>
-        <div class='shows'>
-            <h1>UPCOMING SHOWS</h1>
-            <div class='shows_container'>
-                <div class='show'>
-                    <a href="http://www.dickenspub.ca/"><img src="styles/img/dickens_logo.png" alt="Dickens Pub"></a>
-                    <p>DATE:  Nov 8, 2014</p>
+        <header id="header"></header>
+        <div class="wrap">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/1_75reg1a6c?wmode=transparent" frameborder="0"></iframe>
+            </div>
+            <div class="blog">
+                <h1>WE'RE BACK!</h1>
+                <p>That's right everyone! The Album's finally done and that means we're back! After what seems like an eternity away from the stage (even though it was only a few month) all the paperwork's done, the bills are paid and we're finally ready to just play again!</p>
+                <p>Stay tuned for more shenanigans...</p>
+            </div>
+            <div class='shows'>
+                <h1>UPCOMING SHOWS</h1>
+                <div class='shows_container'>
+                    <div class='show'>
+                        <a href="http://www.dickenspub.ca/"><img src="styles/img/dickens_logo.png" alt="Dickens Pub"></a>
+                        <p>Nov 8, 2014</p>
+                    </div>
+                    <div class='show'>
+                        <a href="http://blindbeggarpub.com/"><img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
+                        <p>Nov 29, 2014</p>
+                    </div>
                 </div>
-                <div class='show'>
-                    <a href="http://blindbeggarpub.com/"><img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
-                    <p>DATE: Nov 29, 2014</p>
-                </div><!-- 
-                <div class='show'>
-                    <a href="http://blindbeggarpub.com/"><img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
-                    <p>DATE: Nov 29, 2014</p>
-                </div> -->
+                <div class='shows_container'>
+                    <div class='show'>
+                        <a href="http://blindbeggarpub.com/"><img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
+                        <p>Nov 29, 2014</p>
+                    </div>
+                </div>
+            </div>
+            <div id='ninja-slider'>
+                <ul>
+                    <li><div data-image="styles/img/md/1.jpg"></div></li>
+                    <li><div data-image="styles/img/md/2.jpg"></div></li>
+                    <li><div data-image="styles/img/md/3.jpg"></div></li>
+                    <li><div data-image="styles/img/md/4.jpg"></div></li>
+                    <li><div data-image="styles/img/md/5.jpg"></div></li>
+                </ul>
             </div>
         </div>
-        <div id='ninja-slider'>
-            <ul>
-                <li><div data-image="styles/img/md/1.jpg"></div></li>
-                <li><div data-image="styles/img/md/2.jpg"></div></li>
-                <li><div data-image="styles/img/md/3.jpg"></div></li>
-                <li><div data-image="styles/img/md/4.jpg"></div></li>
-                <li><div data-image="styles/img/md/5.jpg"></div></li>
-            </ul>
-        </div>
-        <div class='footer'>
-            <div class='player'>
-                <audio controls>
-                    <source src="songs/Slingshot Stride.mp3" type="audio/mpeg">
-                    Sorry, but your browser does not support the audio element.
-                </audio>
-            </div>
-            <div>
-                <a href="https://www.facebook.com/TheDistrictHeat">
-                    <img src="styles/img/facebook.png" alt="Facebook">
-                </a>
-                <a href="https://twitter.com/A_DistrictTweet">
-                    <img src="styles/img/twitter.png" alt="Twitter">
-                </a>
-               <!--  <a href="http://instagram.com/thedistrictheat">
-                    <img src="styles/img/instagram.png" alt="Instagram">
-                </a> -->
-                <a href="https://www.youtube.com/user/TheDistrictHeat">
-                    <img src="styles/img/youtube.png" alt="YouTube">
-                </a>
-            </div>
-        </div>
+        <div class='footer'></div>
     </body>
 </html>

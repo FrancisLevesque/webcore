@@ -44,11 +44,11 @@
 /* The pager id should be: slider id + "-pager" */    
 #ninja-slider-pager
 {
-    padding-top:12px; /* set the distance away from the slider */
+    padding-bottom:12px; /* set the distance away from the slider */
     margin:0 auto; /* center align */
     text-align:center;
-    display:table;
     font-size:0;
+    background:#222;
 }
          
 #ninja-slider-pager a 

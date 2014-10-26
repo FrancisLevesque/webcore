@@ -10,67 +10,42 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/ninja-slider.js"></script>
         <script type="text/javascript" src="scripts/menu.js"></script>
+        <script>
+            $(function(){
+                $(".footer").load("footer.html");
+            });
+        </script>
     </head>
     <body>
-        <header>
-            <a href="#" class="header">THE DISTRICT HEAT</a>
-            <nav>
-                <a id="menu-icon"></a>
-                <ul id="menu">
-                    <li><a href='home.html'>HOME</a></li>
-                    <li id="current"><a href='shows.html'>SHOWS</a></li>
-                    <li><a href='bio.html'>BIO</a></li>
-                    <li><a href='blog.html'>BLOG</a></li>
-                    <li><a href='lyrics.html'>LYRICS</a></li>
-                    <li><a href='merch.html'>MERCH</a></li>
-                    <li><a href='contact.html'>CONTACT</a></li> 
-                </ul>
-            </nav>
-        </header>
-        <div class="shows">
-            <h1>UPCOMING SHOWS</h1>
-            <div class='shows_container'>
-                <div class='show'>
-                    <a href="http://www.dickenspub.ca/"><img src="styles/img/dickens_logo.png" alt="Dickens Pub"></a>
-                    <p>DATE:  Nov 8, 2014</p>
-                </div>
-                <div class='show'>
-                    <a href="http://blindbeggarpub.com/"><img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
-                    <p>DATE: Nov 29, 2014</p>
+        <header id="header"></header>
+        <div class="wrap">
+            <div class="shows">
+                <h1>UPCOMING SHOWS</h1>
+                <div class='shows_container'>
+                    <div class='show'>
+                        <a href="http://www.dickenspub.ca/"><img src="styles/img/dickens_logo.png" alt="Dickens Pub"></a>
+                        <p>Nov 8, 2014</p>
+                    </div>
+                    <div class='show'>
+                        <a href="http://blindbeggarpub.com/"><img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
+                        <p>Nov 29, 2014</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="past_shows">
-            <h1>PAST SHOWS</h1>
-            <p>VERN'S BAR, AB (Jun 27, 2014)</p>
-            <p>THE POWDERHORN SALOON, Bragg Creek, AB (Dec 28, 2013)</p>
-            <p>THE UNICORN PUB, Calgary, AB (Oct 5, 2013)</p>
-            <p>WORLD BIER HAUS 1600, Calgary, AB (Aug 17, 2013)</p>
-            <p>THE UNICORN PUB, Calgary, AB (Aug 3, 2013)</p>
-            <p>STUDIO 37, Calgary, AB (Jun 1, 2013)</p>
-            <p>HILLHURST SUNNYSIDE COMMUNITY ASSOCIATION, Calgary, AB (Apr 5, 2013)</p>
-            <p>SWIGS PUB & GRILL, Calgary, AB (Mar 17, 2013)</p>
-            <p>THE BLIND BEGGAR, Calgary, AB (Feb 17, 2013)</p>
-            <p>THE BLIND BEGGAR, Calgary, AB (Dec 21, 2012)</p>
-        </div>
-        <div class='footer'>
-            <div class='player'>
-                <audio controls>
-                    <source src="songs/Slingshot Stride.mp3" type="audio/mpeg">
-                    Sorry, but your browser does not support the audio element.
-                </audio>
-            </div>
-            <div>
-                <a href="https://www.facebook.com/TheDistrictHeat">
-                    <img src="styles/img/facebook.png" alt="Facebook">
-                </a>
-                <a href="https://twitter.com/A_DistrictTweet">
-                    <img src="styles/img/twitter.png" alt="Twitter">
-                </a>
-                <a href="https://www.youtube.com/user/TheDistrictHeat">
-                    <img src="styles/img/youtube.png" alt="YouTube">
-                </a>
+            <div class="past_shows">
+                <h1>PAST SHOWS</h1>
+                <p>VERN'S BAR, AB (Jun 27, 2014)</p>
+                <p>THE POWDERHORN SALOON, Bragg Creek, AB (Dec 28, 2013)</p>
+                <p>THE UNICORN PUB, Calgary, AB (Oct 5, 2013)</p>
+                <p>WORLD BIER HAUS 1600, Calgary, AB (Aug 17, 2013)</p>
+                <p>THE UNICORN PUB, Calgary, AB (Aug 3, 2013)</p>
+                <p>STUDIO 37, Calgary, AB (Jun 1, 2013)</p>
+                <p>HILLHURST SUNNYSIDE COMMUNITY ASSOCIATION, Calgary, AB (Apr 5, 2013)</p>
+                <p>SWIGS PUB & GRILL, Calgary, AB (Mar 17, 2013)</p>
+                <p>THE BLIND BEGGAR, Calgary, AB (Feb 17, 2013)</p>
+                <p>THE BLIND BEGGAR, Calgary, AB (Dec 21, 2012)</p>
             </div>
         </div>
+        <div class='footer'></div>
     </body>
 </html>
