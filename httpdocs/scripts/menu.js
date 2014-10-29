@@ -77,7 +77,7 @@ build_header = function() {
       menuItemBlog = document.createElement("li");
       linkBlog = document.createElement("a");
       linkHref = document.createAttribute("href");
-      linkHref.value = "blog.html";
+      linkHref.value = "home.html#blog";
       linkBlog.setAttributeNode(linkHref);
       linkText = document.createTextNode("BLOG");
       linkBlog.appendChild(linkText);
@@ -111,16 +111,17 @@ build_header = function() {
 }
 
 highlight_menu = function() {
-  currentURL = document.URL
+  currentURL = document.URL;
   menuItems = document.getElementById("menu").children;
   for (var i = 0; i < menuItems.length; i++) {
     if (currentURL === menuItems[i].children[0].href) {
-      menuItems[i].style.backgroundColor = "#4A4A4A";
+      menuItems[i].style.backgroundColor = "#FF9900";
     }
   }  
 }
 
 handle_menu = function() {
+  document.getElementById("count").innerHTML = document.documentElement.clientWidth;
   if(document.documentElement.clientWidth > 820) {
     document.getElementById("menu").style.display = "block";
   }

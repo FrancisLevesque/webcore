@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	margin: 0 0 32px;
+
+	background-color: black;
+	background-image: url('texture.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@font-face {
+	font-family: JosefinSansTDH;
+	src: url('fonts/JosefinSansTDH.ttf');
+}
+
+h1 {
+	display: inline-block;
+	color: black;
+	text-shadow: 5px 5px 8px #444;
+	font-size: 90px;
+	font-family: JosefinSansTDH, Arial, sans-serif;
+	padding: 2% 6%;
+}
+
+p {
+	display: inline-block;
+	color: #333;
+	text-shadow: 6px 6px 7px #888;
+	font-weight: 300; 
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+	width: 100%;
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: white;
+	text-decoration:none;
+} 
+
+.centered {
+	position: relative;
+	text-align: center;
+	padding-top: 16%;
+	white-space: nowrap;
+}
