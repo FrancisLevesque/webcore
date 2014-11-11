@@ -60,8 +60,11 @@ var main = function() {
 	}, 1700);
 
 	setTimeout(function(){
-		$('.sub-text').addClass('magictime vanishIn').removeClass('hidden');
+		$('#sub1').addClass('magictime vanishIn').removeClass('hidden');
 	}, 4000);
+	setTimeout(function(){
+		$('#sub2').addClass('magictime vanishIn').removeClass('hidden');
+	}, 5000);
 
 };
 

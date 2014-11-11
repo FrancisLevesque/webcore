@@ -7,9 +7,13 @@
         <link rel="stylesheet" href="styles/style.css" type="text/css" />
         <link rel="stylesheet" href="styles/menu.css" type="text/css"/> 
         <link rel="stylesheet" href="styles/ninja-slider.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/ninja-slider.js"></script>
         <script type="text/javascript" src="scripts/menu.js"></script>
+        <script src="audioplayerengine/jquery.js"></script>
+        <script src="audioplayerengine/amazingaudioplayer.js"></script>
+        <script src="audioplayerengine/initaudioplayer-1.js"></script>
         <script>
             $(function(){
                 $(".footer").load("footer.html");
@@ -22,11 +26,14 @@
             <div class="music">
                 <h1>This is what you came here for!</h1>
             </div>
-            <div class='player'>
-                <audio controls>
-                    <source src="songs/Slingshot Stride.mp3" type="audio/mpeg">
-                    Sorry, but your browser does not support the audio element.
-                </audio>
+            <div class="player">
+                <div id="amazingaudioplayer-1" style="display:block;position:relative;width:300px;height:164px;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="The District Heat" data-title="Slingshot Stride" data-album="The District Heat" data-info="" data-image="styles/img/Cover.jpg" data-duration="187">
+                            <div class="amazingaudioplayer-source" data-src="songs/Slingshot Stride.mp3" data-type="audio/mpeg" />
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="lyrics">
                 <div>

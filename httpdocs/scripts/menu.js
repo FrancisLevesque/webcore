@@ -121,7 +121,6 @@ highlight_menu = function() {
 }
 
 handle_menu = function() {
-  document.getElementById("count").innerHTML = document.documentElement.clientWidth;
   if(document.documentElement.clientWidth > 820) {
     document.getElementById("menu").style.display = "block";
   }
