@@ -3,13 +3,10 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The District Heat</title>
-        <link rel="icon" href="styles/img/favicon.ico" type="image/png" />
+        <link rel="icon" href="styles/img/tdh_favicon.ico" type="image/png" />
         <link rel="stylesheet" href="styles/style.css" type="text/css" />
-        <link rel="stylesheet" href="styles/menu.css" type="text/css"/> 
-        <link rel="stylesheet" href="styles/ninja-slider.css" type="text/css" />
-        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-        <script type="text/javascript" src="scripts/ninja-slider.js"></script>
-        <script type="text/javascript" src="scripts/menu.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>
         <script>
             $(function(){
                 $(".footer").load("footer.html");
@@ -19,78 +16,85 @@
     <body>
         <header id="header"></header>
         <div class="wrap">
-            <div class="shows">
+            <div class='shows'>
                 <h1>UPCOMING SHOWS</h1>
-                <div class='shows_container'>
+<!--                 <div class='shows_container'>
                     <div class='show'>
-                        <a href="http://www.dickenspub.ca/"><img src="styles/img/dickens_logo.png" alt="Dickens Pub"></a>
+                        <a href="http://www.dickenspub.ca/">
+                            <img src="styles/img/dickens_logo.png" alt="Dickens Pub"></a>
                         <p>Nov 8, 2014</p>
                     </div>
                     <div class='show'>
-                        <a href="http://blindbeggarpub.com/"><img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
+                        <a href="http://blindbeggarpub.com/">
+                            <img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
                         <p>Nov 29, 2014</p>
+                    </div>
+                </div> -->
+                <div class='shows_container'>
+                    <div class='show'>
+                        <a href="http://blindbeggarpub.com/">
+                            <img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
+                        <p>Nov 28, 2014</p>
                     </div>
                 </div>
             </div>
             <div class="past_shows">
                 <h1>PAST SHOWS</h1>
                 <div class="past_show">
-                    <p id="left">June 27, 2014</p>
-                    <p id="right">Calgary, AB</p>
-                    <p id="center">VERN'S BAR</p>
+                    <p>November 8, 2014</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">DICKENS PUB</p>
                 </div>
                 <div class="past_show">
-                    <p id="left">December 28, 2013</p>
-                    <p id="right">Calgary, AB</p>
-                    <p id="center">THE POWDERHORN SALOON</p>
+                    <p>June 27, 2014</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">VERN'S BAR</p>
                 </div>
                 <div class="past_show">
-                    <p id="left">October 5, 2013</p>
-                    <p id="right">Calgary, AB</p>
-                    <p id="center">THE UNICORN PUB</p>
+                    <p>December 28, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE POWDERHORN SALOON</p>
                 </div>
-                <!-- <div>
-                    <p id="left">AAAAAAAA</p>
-                    <p id="center">BBBBBBBBBB</p>
-                    <p id="right">Calgary, AB</p>
+                <div class="past_show">
+                    <p>October 5, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE UNICORN PUB</p>
                 </div>
-                <p>WORLD BIER HAUS 1600, Calgary, AB (Aug 17, 2013)</p>
-                <div>
-                    <p id="left">AAAAAAAA</p>
-                    <p id="center">BBBBBBBBBB</p>
-                    <p id="right">Calgary, AB</p>
+                <div class="past_show">
+                    <p>August 17, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">WORLD BIER HAUS 1600</p>
                 </div>
-                <p>THE UNICORN PUB, Calgary, AB (Aug 3, 2013)</p>
-                <div>
-                    <p id="left">AAAAAAAA</p>
-                    <p id="center">BBBBBBBBBB</p>
-                    <p id="right">Calgary, AB</p>
+                <div class="past_show">
+                    <p>August 3, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE UNICORN PUB</p>
                 </div>
-                <p>STUDIO 37, Calgary, AB (Jun 1, 2013)</p>
-                <div>
-                    <p id="left">AAAAAAAA</p>
-                    <p id="center">BBBBBBBBBB</p>
-                    <p id="right">Calgary, AB</p>
+                <div class="past_show">
+                    <p>June 1, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">STUDIO 37</p>
                 </div>
-                <p>HILLHURST SUNNYSIDE COMMUNITY ASSOCIATION, Calgary, AB (Apr 5, 2013)</p>
-                <div>
-                    <p id="left">AAAAAAAA</p>
-                    <p id="center">BBBBBBBBBB</p>
-                    <p id="right">Calgary, AB</p>
+                <div class="past_show">
+                    <p>April 5, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">HSCA</p>
                 </div>
-                <p>SWIGS PUB & GRILL, Calgary, AB (Mar 17, 2013)</p>
-                <div>
-                    <p id="left">AAAAAAAA</p>
-                    <p id="center">BBBBBBBBBB</p>
-                    <p id="right">Calgary, AB</p>
+                <div class="past_show">
+                    <p>March 17, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">SWIGS PUB & GRILL</p>
                 </div>
-                <p>THE BLIND BEGGAR, Calgary, AB (Feb 17, 2013)</p>
-                <div>
-                    <p id="left">AAAAAAAA</p>
-                    <p id="center">BBBBBBBBBB</p>
-                    <p id="right">Calgary, AB</p>
+                <div class="past_show">
+                    <p>Feb 17, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE BLIND BEGGAR</p>
                 </div>
-                <p>THE BLIND BEGGAR, Calgary, AB (Dec 21, 2012)</p> -->
+                <div class="past_show">
+                    <p>Dec 21, 2012</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE BLIND BEGGAR</p>
+                </div>
             </div>
         </div>
         <div class='footer'></div>
