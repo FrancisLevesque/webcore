@@ -245,6 +245,20 @@ li {
 	}
 }
 
+/*MEDIA QUERY*/
+@media only screen and (max-width : 400px) {
+	.header {
+		font-size: 28px;
+	}
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 340px) {
+	.header {
+		font-size: 24px;
+	}
+}
+
 /***************************************
 * Index Page Styling
 ***************************************/
@@ -376,15 +390,15 @@ li {
 	}
 }
 
-@media only screen and (max-width : 640px) {
-	.show {
-		display: block;
-	}
-}
-
 @media only screen and (max-width : 740px) {
 	.past_show p {
 		width: 156px;
+	}
+}
+
+@media only screen and (max-width : 640px) {
+	.show {
+		display: block;
 	}
 }
 
@@ -407,22 +421,56 @@ li {
 /***************************************
 * Bio Styling
 ***************************************/
-.bio {
+.bio:before {	  
+	content: "";
+	position: absolute;
+	z-index: -1;
+  
+	background-image: url('img/bio/band.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 900px;
+	height: 360px;
+
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
 }
 
-.bio h1 {
+.bio {	
+	padding-bottom: 60px;
+}
+
+.bio h1, p {
 	color: white;
 }
 
+.bio p {
+	padding-left: 6%;
+	padding-right: 6%;
+}
+
 .self_bio_container {
-	display: table;
-	margin: 0 auto;
+	text-align:center;
 }
 
 .self_bio {
-	display: inline-block;
-	margin: 0 auto;
-	padding: 30px 100px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	width: 400px;
+	height: 440px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.self_bio img {
+	height: 300px;
+	width: 200px;
 }
 
 .self_bio p {
@@ -432,33 +480,28 @@ li {
 	color: black;
 }
 
-/*MEDIA QUERY*/
-@media only screen and (max-width : 1058px) {
-.bio {
-		display: block;
+@media only screen and (max-width : 820px) {
+	.bio:before {
+		height: 280px;
+	}
+
+	.bio p {
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+
+	.self_bio {
+		width: 320px;
 	}
 }
 
 /***************************************
 * Blog Styling
 ***************************************/
-.blog {
-	padding-top: 40px;
-	padding-bottom: 80px;
-}
-
-.blog h1, .blog h2, .blog h3, .blog p {
-	color: white;
-}
-
 .blog div {
 	display: inline-block;
 	width: 100%;
 	padding: 2% 0;
-}
-
-.blog div h3 {
-	padding: 0;
 }
 
 .blog div img {
@@ -469,6 +512,14 @@ li {
 .blog div p {
 	display: inline;
 	padding: 0;
+}
+
+.archive {
+
+}
+
+.entry {
+
 }
 
 @media only screen and (max-width : 820px) {
