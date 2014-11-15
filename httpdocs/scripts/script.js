@@ -4,7 +4,7 @@ build_header = function() {
     // <a href="#" class="header">THE DISTRICT HEAT</a>
     titleLink = document.createElement("a");
     titleHref = document.createAttribute("href");
-    titleHref.value = "#";
+    titleHref.value = "home.html";
     titleLink.setAttributeNode(titleHref);
     titleClass = document.createAttribute("class");
     titleClass.value = "header";

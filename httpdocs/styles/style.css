@@ -249,12 +249,30 @@ li {
 * Index Page Styling
 ***************************************/
 .background {
-	margin: 0;
+	text-align: center;
 }
 
-.cover img {
-	display: block;
-	margin: 6% auto;
+.cover {
+	padding: 60px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.cover a img {
+	height: 400px;
+	width: 400px;
+
+  -webkit-transition: all 0.25s ease;
+     -moz-transition: all 0.25s ease;
+       -o-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+}
+
+.cover a img:hover {
+	margin-top: -20px;
+	height: 440px;
+	width: 440px;
 }
 
 /***************************************
