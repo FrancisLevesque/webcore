@@ -332,6 +332,38 @@ li {
 	margin: 2% auto;
 }
 
+.badges {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.badge {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	height: 60px;
+	width: 160px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.badge a img {
+	height: 40px;
+	width: 120px;
+
+  -webkit-transition: all 0.25s ease;
+     -moz-transition: all 0.25s ease;
+       -o-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+}
+
+.badge a img:hover {
+	height: 50px;
+	width: 150px;
+}
+
+
 /***************************************
 * Shows Styling
 ***************************************/
@@ -585,7 +617,7 @@ li {
 ***************************************/
 .icons {
 	text-align: center;
-	margin-bottom: 60px;
+	margin: 60px 0;
 }
 
 .icon {
@@ -594,7 +626,6 @@ li {
 
 	height: 150px;
 	width: 150px;
-	padding: 30px;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -611,8 +642,6 @@ li {
 }
 
 .icon a img:hover {
-	margin-top: -6px;
-	margin-left: -6px;
 	height: 140px;
 	width: 140px;
 }
