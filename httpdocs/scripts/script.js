@@ -29,82 +29,82 @@ build_header = function() {
       menuId.value = "menu";
       menu.setAttributeNode(menuId);
 
-      // <li><a href='home.html'>HOME</a></li>
-      menuItemHome = document.createElement("li");
+      // <a href='home.html'><li>HOME</li></a>
       linkHome = document.createElement("a");
       linkHref = document.createAttribute("href");
       linkHref.value = "home.html";
       linkHome.setAttributeNode(linkHref);
-      linkText = document.createTextNode("HOME");
-      linkHome.appendChild(linkText);
-      menuItemHome.appendChild(linkHome);
-      menu.appendChild(menuItemHome);
+        menuItemHome = document.createElement("li");
+        menuItemText = document.createTextNode("HOME");
+        menuItemHome.appendChild(menuItemText);
+      linkHome.appendChild(menuItemHome);
+      menu.appendChild(linkHome);
 
-      // <li><a href='music.html'>MUSIC</a></li>
-      menuItemMusic = document.createElement("li");
+      // <a href='music.html'><li>MUSIC</li></a>
       linkMusic = document.createElement("a");
       linkHref = document.createAttribute("href");
       linkHref.value = "music.html";
       linkMusic.setAttributeNode(linkHref);
-      linkText = document.createTextNode("MUSIC");
-      linkMusic.appendChild(linkText);
-      menuItemMusic.appendChild(linkMusic);
-      menu.appendChild(menuItemMusic);
+        menuItemMusic = document.createElement("li");
+        menuItemText = document.createTextNode("MUSIC");
+        menuItemMusic.appendChild(menuItemText);
+      linkMusic.appendChild(menuItemMusic);
+      menu.appendChild(linkMusic);
 
-      // <li><a href='shows.html'>SHOWS</a></li>
-      menuItemShows = document.createElement("li");
+      // <a href='shows.html'><li>SHOWS</li></a>
       linkShows = document.createElement("a");
       linkHref = document.createAttribute("href");
       linkHref.value = "shows.html";
       linkShows.setAttributeNode(linkHref);
-      linkText = document.createTextNode("SHOWS");
-      linkShows.appendChild(linkText);
-      menuItemShows.appendChild(linkShows);
-      menu.appendChild(menuItemShows);
+        menuItemShows = document.createElement("li");
+        menuItemText = document.createTextNode("SHOWS");
+        menuItemShows.appendChild(menuItemText);
+      linkShows.appendChild(menuItemShows);
+      menu.appendChild(linkShows);
 
-      // <li><a href='bio.html'>BIO</a></li>
-      menuItemBio = document.createElement("li");
-      linkBio = document.createElement("a");
-      linkHref = document.createAttribute("href");
-      linkHref.value = "bio.html";
-      linkBio.setAttributeNode(linkHref);
-      linkText = document.createTextNode("BIO");
-      linkBio.appendChild(linkText);
-      menuItemBio.appendChild(linkBio);
-      menu.appendChild(menuItemBio);
-
-      // <li><a href='blog.html'>BLOG</a></li>
-      menuItemBlog = document.createElement("li");
+      // <a href='blog.html'><li>BLOG</li></a>
       linkBlog = document.createElement("a");
       linkHref = document.createAttribute("href");
       linkHref.value = "blog.html";
       linkBlog.setAttributeNode(linkHref);
-      linkText = document.createTextNode("BLOG");
-      linkBlog.appendChild(linkText);
-      menuItemBlog.appendChild(linkBlog);
-      menu.appendChild(menuItemBlog);
+        menuItemBlog = document.createElement("li");
+        menuItemText = document.createTextNode("BLOG");
+        menuItemBlog.appendChild(menuItemText);
+      linkBlog.appendChild(menuItemBlog);
+      menu.appendChild(linkBlog);
 
-      // <li><a href='merch.html'>MERCH</a></li>
-      menuItemMerch = document.createElement("li");
+      // <a href='bio.html'><li>BIO</li></a>
+      linkBio = document.createElement("a");
+      linkHref = document.createAttribute("href");
+      linkHref.value = "bio.html";
+      linkBio.setAttributeNode(linkHref);
+        menuItemBio = document.createElement("li");
+        menuItemText = document.createTextNode("BIO");
+        menuItemBio.appendChild(menuItemText);
+      linkBio.appendChild(menuItemBio);
+      menu.appendChild(linkBio);
+
+      // <a href='merch.html'><li>MERCH</li></a>
       linkMerch = document.createElement("a");
       linkHref = document.createAttribute("href");
       linkHref.value = "merch.html";
       linkMerch.setAttributeNode(linkHref);
-      linkText = document.createTextNode("MERCH");
-      linkMerch.appendChild(linkText);
-      menuItemMerch.appendChild(linkMerch);
-      menu.appendChild(menuItemMerch);
+        menuItemMerch = document.createElement("li");
+        menuItemText = document.createTextNode("MERCH");
+        menuItemMerch.appendChild(menuItemText);
+      linkMerch.appendChild(menuItemMerch);
+      menu.appendChild(linkMerch);
 
-      // <li><a href='contact.html'>CONTACT</a></li>
-      menuItemContact = document.createElement("li");
+      // <a href='contact.html'><li>CONTACT</li></a>
       linkContact = document.createElement("a");
       linkHref = document.createAttribute("href");
       linkHref.value = "contact.html";
       linkContact.setAttributeNode(linkHref);
-      linkText = document.createTextNode("CONTACT");
-      linkContact.appendChild(linkText);
-      menuItemContact.appendChild(linkContact);
-      menu.appendChild(menuItemContact);
+        menuItemContact = document.createElement("li");
+        menuItemText = document.createTextNode("CONTACT");
+        menuItemContact.appendChild(menuItemText);
+      linkContact.appendChild(menuItemContact);
+      menu.appendChild(linkContact);
 
     nav.appendChild(menu);
   header.appendChild(nav);
@@ -1558,7 +1558,236 @@ if (typeof Object.create !== "function") {
     };
 }(jQuery, window, document));
 
+/*************************************************
+ *  Hover Captions Plugin
+ ************************************************/
+(function($){
+
+  var Captions = function(el, opts) {
+    var _this = this,
+        $this = $(el),
+        $el = $this.clone(),
+        href = $this.attr('href'),
+        $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))), //strip for ie7
+        _overlay_css = {};
+
+    if ( ! $target.length ) {
+      $target = $this.next(opts.data_selector);
+    }
+    if ($target.length) {
+      this.set_from_attr(el, opts);
+      $wrap = $('<div class="drop-panel" />',{position: 'relative', 'z-index': 1, display: 'block', overflow: 'hidden'})
+              .append($el)
+              .append($target);
+      $this.replaceWith($wrap);
+      $target.hide();
+
+      $wrap.css({ 'position':'relative', 'overflow':'hidden', display: 'block', padding:'2px' });
+      if (opts.find_image && $this.not('img')) {
+        var img = $wrap.find('img'),
+          w = img.width(),
+          h = img.height();
+      }
+      else {
+        var w = $wrap.outerWidth(),
+          h = $wrap.outerHeight();
+      }
+
+      var overlay_w = opts.width || w, overlay_h = opts.height || h;
+      $target.css({ 'width':overlay_w, 'height':overlay_h, 'position':'absolute', 'z-index':33, overflow: 'hidden' });
+      var _overlay_css = {};
+      
+      if (opts.overlay_bg) { 
+        _overlay_css.background = opts.overlay_bg; 
+      }
+      if (opts.overlay_opacity<1) { 
+        _overlay_css.opacity = opts.overlay_opacity; 
+      }
+
+      // CSS: Overlay X Position
+      _overlay_css.left = (opts.overlay_x == 'left')
+        ? 0
+        : (opts.overlay_x == 'right')
+          ? w-overlay_w
+          : (w - overlay_w) / 2 + 'px';
+      
+      // CSS: Overlay Y Position
+      _overlay_css.top = (opts.overlay_y == 'top')
+        ? 0
+        : (opts.overlay_y == 'bottom')
+          ? h-overlay_h
+          : (h - overlay_h) / 2 + 'px';
+      
+      // CSS: Apply rules
+      $target.css(_overlay_css); 
+      
+      // slide effect
+      if (opts.effect=='slide') {
+        var slide_css = {};
+        switch (opts.direction) {
+          case 'top':
+            slide_css.top = '-'+overlay_h+'px';
+            break;
+          case 'bottom':
+            slide_css.top = h+'px';
+            break;
+          case 'left':
+            slide_css.left = '-'+overlay_w+'px';
+            break;
+          case 'right':
+          default:
+            slide_css.left = w+'px';
+            break;
+        }
+
+        // Apply Slide rules
+        $target.css('z-index',opts.zindex+1).css(slide_css);
+
+        // Hover events
+        $wrap.hover(function(){
+          $target.show().stop(true, true).animate({ 'top': _overlay_css.top, 'left': _overlay_css.left }, +opts.speed, opts.onshow());
+        }, function(){
+          $target.show().stop(true, true).animate(slide_css, +opts.speed, opts.onhide());
+        });
+        
+      // fade effect
+      } else if (opts.effect=='fade') {
+        $target.css('z-index',opts.zindex+1).hide();
+        $wrap.hover(function () {
+          $target.stop(true, true).fadeIn(+opts.speed, opts.onshow());
+        }, function () {
+          $target.stop(true, true).fadeOut(+opts.speed, opts.onhide());
+        });
+      
+      // just show/hide
+      } else {
+        $target.css('z-index',opts.zindex+1).hide();
+        $wrap.hover(function () {
+          $target.show(0, opts.onshow());
+        }, function () {
+          $target.hide(0, opts.onhide());
+        });
+      }
+    }
+  };
+
+  Captions.prototype = {
+    constructor: Captions,
+    set_from_attr: function(el, opt){
+      var cfg={}, attrs=el.attributes, l=attrs.length;
+      for (var i=0; i<l; i++)
+      {
+        attr = attrs.item(i);
+        if (/cap-/i.test(attr.nodeName))
+        {
+          opt[attr.nodeName.replace('cap-', '')] = attr.nodeValue;
+        }
+      }
+    }
+  };
+  
+  $.fn.hcaptions = function (option) {
+    return this.each(function () {
+      var $this = $(this)
+        , data = $this.data('captions')
+        , options = $.extend({}, $.fn.hcaptions.defaults, $this.data(), typeof option == 'object' && option);
+      if (!data) $this.data('captions', (data = new Captions(this, options)));
+      if (typeof option == 'string') data[option]();
+    });
+  };
+
+  $.fn.hcaptions.defaults = {
+    /**
+     * Selector for caption content 
+     * @type {String}
+     */
+    data_selector: '.cap-overlay',
+
+    /**
+     * Overlay width
+     * @default full width
+     * @type {Number}
+     */
+    width: 0,
+
+    /**
+     * Overlay height
+     * @type {Number}
+     */
+    height: 0,
+
+    /**
+     * Horizontal position for the overlay
+     * @options [center, left, right]
+     * @type {String}
+     */
+    overlay_x: 'center',
+
+    /**
+     * Vertical position for the overlay
+     * @options [center, top, bottom]
+     * @type {String}
+     */
+    overlay_y: 'center',
+
+    /**
+     * Background css for overlay
+     * @type {String}
+     */
+    overlay_bg: '',
+
+    /**
+     * Opacity of overlay
+     * @type {Number}
+     */
+    overlay_opacity: 1,
+
+    /**
+     * Effect of overlay
+     * @options [fade, slide, show/hide]
+     * @type {String}
+     */
+    effect: 'slide',
+
+    /**
+     * Animation speed in ms
+     * @type {Number}
+     */
+    speed: 400,
+
+    /**
+     * Direction of overlay
+     * @options [top, bottom, right, left]
+     * @type {String}
+     */
+    direction: 'top',
+
+    /**
+     * Z-Index Base
+     * @type {Number}
+     */
+    zindex: 2,
+
+    find_image: false,
+
+    /**
+     * On show callback
+     * @return {[type]} [description]
+     */
+    onshow: function(){},
+
+    /**
+     * On hide callback
+     * @return {[type]} [description]
+     */
+    onhide: function(){}
+  };
+})(jQuery);  
+
+
 $(document).ready(function() {
+  $('.hcaption').hcaptions();
+
   $("#owl").owlCarousel({
       navigation: true, // Show next and prev buttons
       slideSpeed: 300,
@@ -1573,5 +1802,4 @@ $(document).ready(function() {
     //Hide the other panels
     $(".accordion-content").not($(this).next()).slideUp('fast');
   });
-
 });
