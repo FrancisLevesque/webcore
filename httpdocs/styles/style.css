@@ -18,6 +18,7 @@ body {
 	border: 0;
 	margin: 0 auto 32px;
 
+	background-color: #777;
 	background-image: url('img/texture_dark3.jpg');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -321,12 +322,6 @@ li {
 }
 
 /***************************************
-* Pictures Styling
-***************************************/
-.pictures {
-}
-
-/***************************************
 * Music Styling
 ***************************************/
 .player {
@@ -364,7 +359,6 @@ li {
 	height: 50px;
 	width: 150px;
 }
-
 
 /***************************************
 * Shows Styling
@@ -496,6 +490,12 @@ li {
 	color: white;
 	font-family: JosefinSansTDH, Arial, sans-serif;
 	opacity: 0.6;
+
+    -webkit-transition: all 0.25s ease;
+       -moz-transition: all 0.25s ease;
+         -o-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+            transition: all 0.25s ease;
 }
 
 #bar:hover {
@@ -544,7 +544,6 @@ li {
 	content: "";
 	position: absolute;
 	z-index: -1;
-	border-radius: 5px;
   
 	background-image: url('img/bio/band.jpg');
 	-webkit-background-size: cover;
@@ -554,11 +553,11 @@ li {
 	height: 360px;
 	width: 900px;
 
-	-webkit-filter: blur(5px) brightness(60%);
-	-moz-filter: blur(5px) brightness(60%);
-	-o-filter: blur(5px) brightness(60%);
-	-ms-filter: blur(5px) brightness(60%);
-	filter: blur(5px) brightness(60%);
+	-webkit-filter: blur(2px) brightness(60%);
+	-moz-filter: blur(2px) brightness(60%);
+	-o-filter: blur(2px) brightness(60%);
+	-ms-filter: blur(2px) brightness(60%);
+	filter: blur(2px) brightness(60%);
 }
 
 .bio {	
@@ -589,15 +588,14 @@ li {
 }
 
 .self_bio img {
-	border-radius: 5px;
 	height: 300px;
 	width: 200px;
 
-	-webkit-filter: contrast(65%);
-	-moz-filter: contrast(65%);
-	-o-filter: contrast(65%);
-	-ms-filter: contrast(65%);
-	filter: contrast(65%);
+	-webkit-filter: contrast(80%);
+	-moz-filter: contrast(80%);
+	-o-filter: contrast(80%);
+	-ms-filter: contrast(80%);
+	filter: contrast(80%);
 
     -webkit-transition: all 0.25s ease;
        -moz-transition: all 0.25s ease;
@@ -607,7 +605,6 @@ li {
 }
 
 .self_bio img:hover {
-	border-radius: 5px;
 	height: 300px;
 	width: 200px;
 
@@ -680,37 +677,85 @@ li {
 /***************************************
 * Merch Styling
 ***************************************/
-.item_container {
+.items {
 	text-align:center;
 }
 
-#item {
+#left {
+	float: left;
+}
+
+#cd {
+	background-size: 360px 200px;
+    height: 200px;
+    width: 360px;
+}
+
+#shirt {
+	background-size: 220px 300px;
+    height: 300px;
+    width: 220px;
+}
+
+#button {
+	background-size: 220px 220px;
+    height: 220px;
+    width: 220px;
+}
+
+.item_container {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 
-	height: 340px;
-	width: 260px;
+    position: relative;
+    margin: auto;
 	display: inline-block;
-	vertical-align:top;
+	margin: 20px;
 }
 
-#item img {
-	border-radius: 5px;
-	height: 300px;
-	width: 220px;
+.item {
+	background-color: black;
+	opacity: 0.0;
+    position: absolute;
+    text-align: center;
+
+  -webkit-transition: all 0.25s ease;
+     -moz-transition: all 0.25s ease;
+       -o-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+          transition: all 0.25s ease;
 }
 
-.item_overlay {
-	background-color: rgba(0, 0, 0, 0.4);
-	border-radius: 5px;
-	height: 300px;
-	width: 220px;
+.item p {
+	position: relative;
+	top: 100%;
+	transform: translateY(-100%);
 }
 
-@media only screen and (max-width : 820px) {
-	#item {
-		height: 340px;
-		width: 260px;
+.item:hover {
+	opacity: 0.8;
+}
+
+@media only screen and (max-width : 900px) {
+	#left {
+		float: none;
+	}
+
+	.item_container {
+		margin: 0 2% 0;
+	}
+}
+
+@media only screen and (max-width : 760px) {
+	.item_container {
+		margin: 0 1% 0;
+	}
+}
+
+@media only screen and (max-width : 720px) {
+	.item_container {
+		display: table;
+		margin: 2% auto;
 	}
 }
 
@@ -719,7 +764,7 @@ li {
 ***************************************/
 .icons {
 	text-align: center;
-	margin: 60px 0;
+	margin: 40px 0;
 }
 
 .icon {
@@ -735,6 +780,8 @@ li {
 .icon a img {
 	height: 128px;
 	width: 128px;
+	border-radius: 30px;
+	background-color: rgba(0, 0, 0, 0.5);
 
   -webkit-transition: all 0.25s ease;
      -moz-transition: all 0.25s ease;
@@ -744,8 +791,9 @@ li {
 }
 
 .icon a img:hover {
-	height: 140px;
-	width: 140px;
+	height: 132px;
+	width: 132px;
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 /*MEDIA QUERY*/
@@ -794,6 +842,15 @@ li {
 
 .social_media {
 	float: right;
+}
+
+.social_media a img {
+	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.0);
+}
+
+.social_media a img:hover {
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*MEDIA QUERY*/
