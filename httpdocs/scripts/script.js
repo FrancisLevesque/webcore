@@ -1,128 +1,19 @@
 /***************************************
 * Menu Building/Handling
 ***************************************/
-build_header = function() {
-  header = document.getElementById("header");
-
-    // <a href="#" class="header">THE DISTRICT HEAT</a>
-    titleLink = document.createElement("a");
-    titleHref = document.createAttribute("href");
-    titleHref.value = "home.html";
-    titleLink.setAttributeNode(titleHref);
-    titleClass = document.createAttribute("class");
-    titleClass.value = "header";
-    titleLink.setAttributeNode(titleClass);
-    titleText = document.createTextNode("THE DISTRICT HEAT");
-    titleLink.appendChild(titleText);
-    header.appendChild(titleLink);
-
-    // <nav>
-    nav = document.createElement("nav");
-
-      // <a id="menu-icon"></a>
-      menuIconLink = document.createElement("a");
-      menuIconId = document.createAttribute("id");
-      menuIconId.value = "menu-icon";
-      menuIconLink.setAttributeNode(menuIconId);
-      nav.appendChild(menuIconLink);
-
-      // <ul id="menu">
-      menu = document.createElement("ul");
-      menuId = document.createAttribute("id");
-      menuId.value = "menu";
-      menu.setAttributeNode(menuId);
-
-      // <a href='home.html'><li>HOME</li></a>
-      linkHome = document.createElement("a");
-      linkHref = document.createAttribute("href");
-      linkHref.value = "home.html";
-      linkHome.setAttributeNode(linkHref);
-        menuItemHome = document.createElement("li");
-        menuItemText = document.createTextNode("HOME");
-        menuItemHome.appendChild(menuItemText);
-      linkHome.appendChild(menuItemHome);
-      menu.appendChild(linkHome);
-
-      // <a href='music.html'><li>MUSIC</li></a>
-      linkMusic = document.createElement("a");
-      linkHref = document.createAttribute("href");
-      linkHref.value = "music.html";
-      linkMusic.setAttributeNode(linkHref);
-        menuItemMusic = document.createElement("li");
-        menuItemText = document.createTextNode("MUSIC");
-        menuItemMusic.appendChild(menuItemText);
-      linkMusic.appendChild(menuItemMusic);
-      menu.appendChild(linkMusic);
-
-      // <a href='shows.html'><li>SHOWS</li></a>
-      linkShows = document.createElement("a");
-      linkHref = document.createAttribute("href");
-      linkHref.value = "shows.html";
-      linkShows.setAttributeNode(linkHref);
-        menuItemShows = document.createElement("li");
-        menuItemText = document.createTextNode("SHOWS");
-        menuItemShows.appendChild(menuItemText);
-      linkShows.appendChild(menuItemShows);
-      menu.appendChild(linkShows);
-
-      // <a href='blog.html'><li>BLOG</li></a>
-      linkBlog = document.createElement("a");
-      linkHref = document.createAttribute("href");
-      linkHref.value = "blog.html";
-      linkBlog.setAttributeNode(linkHref);
-        menuItemBlog = document.createElement("li");
-        menuItemText = document.createTextNode("BLOG");
-        menuItemBlog.appendChild(menuItemText);
-      linkBlog.appendChild(menuItemBlog);
-      menu.appendChild(linkBlog);
-
-      // <a href='bio.html'><li>BIO</li></a>
-      linkBio = document.createElement("a");
-      linkHref = document.createAttribute("href");
-      linkHref.value = "bio.html";
-      linkBio.setAttributeNode(linkHref);
-        menuItemBio = document.createElement("li");
-        menuItemText = document.createTextNode("BIO");
-        menuItemBio.appendChild(menuItemText);
-      linkBio.appendChild(menuItemBio);
-      menu.appendChild(linkBio);
-
-      // <a href='merch.html'><li>MERCH</li></a>
-      linkMerch = document.createElement("a");
-      linkHref = document.createAttribute("href");
-      linkHref.value = "merch.html";
-      linkMerch.setAttributeNode(linkHref);
-        menuItemMerch = document.createElement("li");
-        menuItemText = document.createTextNode("MERCH");
-        menuItemMerch.appendChild(menuItemText);
-      linkMerch.appendChild(menuItemMerch);
-      menu.appendChild(linkMerch);
-
-      // <a href='contact.html'><li>CONTACT</li></a>
-      linkContact = document.createElement("a");
-      linkHref = document.createAttribute("href");
-      linkHref.value = "contact.html";
-      linkContact.setAttributeNode(linkHref);
-        menuItemContact = document.createElement("li");
-        menuItemText = document.createTextNode("CONTACT");
-        menuItemContact.appendChild(menuItemText);
-      linkContact.appendChild(menuItemContact);
-      menu.appendChild(linkContact);
-
-    nav.appendChild(menu);
-  header.appendChild(nav);
-}
-
-highlight_menu = function() {
-  currentURL = document.URL;
-  menuItems = document.getElementById("menu").children;
-  for (var i = 0; i < menuItems.length; i++) {
-    if (currentURL === menuItems[i].href) {
-      menuItems[i].children[0].style.backgroundColor = "#FF9900";
-      break;
-    }
-  }  
-}
+// highlight_menu = function() {
+//   currentURL = document.URL;
+//   menuItems = document.getElementById("menu").children;
+//   for (var i = 0; i < menuItems.length; i++) {
+//     menuItems[i].children[0].style.backgroundColor = "#000";
+//   }
+//   for (var i = 0; i < menuItems.length; i++) {
+//     if (currentURL === menuItems[i].href) {
+//       menuItems[i].children[0].style.backgroundColor = "#FF9900";
+//       break;
+//     }
+//   }  
+// }
 
 handle_menu = function() {
   document.getElementById("menu-icon").onclick = function() {menu_click()};
@@ -140,20 +31,24 @@ handle_menu = function() {
   }
 }
 
+execute = function() {
+  handle_menu();
+  // highlight_menu();
+  // document.getElementsByClassName("merchLink")[0].addEventListener("click", highlight_menu);
+  // document.getElementsByClassName("contactLink")[0].addEventListener("click", highlight_menu);
+}
+
+
 if (document.addEventListener)
   document.addEventListener("DOMContentLoaded", function(){
-    build_header();
-    handle_menu();
-    highlight_menu();
+    execute();
   }, false)
 else if (document.all && !window.opera){
   document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
   var contentloadtag = document.getElementById("contentloadtag")
   contentloadtag.onreadystatechange = function(){
     if (this.readyState=="complete"){
-      build_header()
-      handle_menu()
-      highlight_menu()
+      execute();
     }
   }
 }
@@ -1325,6 +1220,90 @@ window.onresize = function() {handle_menu()};
 * JQuery Main
 ***************************************/
 $(document).ready(function() {
+  $(".homeLink").click(function () {
+    $('#music').hide('slide', {direction: 'right'}, 500);
+    $('#shows').hide('slide', {direction: 'right'}, 500);
+    $('#blog').hide('slide', {direction: 'right'}, 500);
+    $('#bio').hide('slide', {direction: 'right'}, 500);
+    $('#merch').hide('slide', {direction: 'right'}, 500);
+    $('#contact').hide('slide', {direction: 'right'}, 500);
+    setTimeout(function () {
+      $('#home').show('slide', {direction: 'left'}, 500);
+    }, 500);
+  });
+
+  $(".musicLink").click(function () {
+    $('#home').hide('slide', {direction: 'right'}, 500);
+    $('#shows').hide('slide', {direction: 'right'}, 500);
+    $('#blog').hide('slide', {direction: 'right'}, 500);
+    $('#bio').hide('slide', {direction: 'right'}, 500);
+    $('#merch').hide('slide', {direction: 'right'}, 500);
+    $('#contact').hide('slide', {direction: 'right'}, 500);
+    setTimeout(function () {
+      $('#music').show('slide', {direction: 'left'}, 500);
+    }, 500);
+  });
+
+  $(".showsLink").click(function () {
+    $('#home').hide('slide', {direction: 'right'}, 500);
+    $('#music').hide('slide', {direction: 'right'}, 500);
+    $('#blog').hide('slide', {direction: 'right'}, 500);
+    $('#bio').hide('slide', {direction: 'right'}, 500);
+    $('#merch').hide('slide', {direction: 'right'}, 500);
+    $('#contact').hide('slide', {direction: 'right'}, 500);
+    setTimeout(function () {
+      $('#shows').show('slide', {direction: 'left'}, 500);
+    }, 500);
+  });
+
+  $(".blogLink").click(function () {
+    $('#home').hide('slide', {direction: 'right'}, 500);
+    $('#music').hide('slide', {direction: 'right'}, 500);
+    $('#shows').hide('slide', {direction: 'right'}, 500);
+    $('#bio').hide('slide', {direction: 'right'}, 500);
+    $('#merch').hide('slide', {direction: 'right'}, 500);
+    $('#contact').hide('slide', {direction: 'right'}, 500);
+    setTimeout(function () {
+      $('#blog').show('slide', {direction: 'left'}, 500);
+    }, 500);
+  });
+
+  $(".bioLink").click(function () {
+    $('#home').hide('slide', {direction: 'right'}, 500);
+    $('#music').hide('slide', {direction: 'right'}, 500);
+    $('#shows').hide('slide', {direction: 'right'}, 500);
+    $('#blog').hide('slide', {direction: 'right'}, 500);
+    $('#merch').hide('slide', {direction: 'right'}, 500);
+    $('#contact').hide('slide', {direction: 'right'}, 500);
+    setTimeout(function () {
+      $('#bio').show('slide', {direction: 'left'}, 500);
+    }, 500);
+  });
+
+  $(".merchLink").click(function () {
+    $('#home').hide('slide', {direction: 'right'}, 500);
+    $('#music').hide('slide', {direction: 'right'}, 500);
+    $('#shows').hide('slide', {direction: 'right'}, 500);
+    $('#blog').hide('slide', {direction: 'right'}, 500);
+    $('#bio').hide('slide', {direction: 'right'}, 500);
+    $('#contact').hide('slide', {direction: 'right'}, 500);
+    setTimeout(function () {
+      $('#merch').show('slide', {direction: 'left'}, 500);
+    }, 500);
+  });
+
+  $(".contactLink").click(function () {
+    $('#home').hide('slide', {direction: 'right'}, 500);
+    $('#music').hide('slide', {direction: 'right'}, 500);
+    $('#shows').hide('slide', {direction: 'right'}, 500);
+    $('#blog').hide('slide', {direction: 'right'}, 500);
+    $('#bio').hide('slide', {direction: 'right'}, 500);
+    $('#merch').hide('slide', {direction: 'right'}, 500);
+    setTimeout(function () {
+      $('#contact').show('slide', {direction: 'left'}, 500);
+    }, 500);
+  });
+
   $('.flexslider').flexslider({
     animation: "slide"
   });

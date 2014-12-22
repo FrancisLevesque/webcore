@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The District Heat</title>
+        <link rel="icon" href="styles/img/tdh_favicon.ico" type="image/png" />
+        <link rel="stylesheet" href="styles/style.css" type="text/css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>
+        <script>
+            $(function(){
+                $(".footer").load("footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <header id="header"></header>
+        <div class="wrap">
+            <div class="merch">
+                <h1>Buy our stuff!</h1>
+                <h3 id="left">CDs</h3>
+                <div class='items'>
+                    <div class='item_container' id="cd" style="background-image: url('styles/img/merch/cds.jpg');">
+                        <div class="item" id="cd">
+                            <p>Oh my god, so many CDs...</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3 id="left">T-shirts</h3>
+                <div class='items'>
+                    <div class='item_container' id="shirt" style="background-image: url('styles/img/merch/shirt3_black.jpg');">
+                        <div class="item" id="shirt">
+                            <p>All American Apparel, all the time!</p>
+                        </div>
+                    </div>
+                    <div class='item_container' id="shirt" style="background-image: url('styles/img/merch/shirt2_white.jpg');">
+                        <div class="item" id="shirt">
+                            <p>Second generation shirts designed by Claire Levesque</p>
+                        </div>
+                    </div> 
+                    <div class='item_container' id="shirt" style="background-image: url('styles/img/merch/shirt1_red.jpg');">
+                        <div class="item" id="shirt">
+                            <p>First generation shirt!</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3 id="left">Buttons</h3>
+                <div class='items'>
+                    <div class='item_container' id="button" style="background-image: url('styles/img/merch/button.jpg');">
+                        <div class="item" id="button">
+                            <p>Buttons are the bomb!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer'></div>
+    </body>
+</html>
