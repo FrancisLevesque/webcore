@@ -1,20 +1,6 @@
 /***************************************
-* Menu Building/Handling
+* Menu Handling
 ***************************************/
-// highlight_menu = function() {
-//   currentURL = document.URL;
-//   menuItems = document.getElementById("menu").children;
-//   for (var i = 0; i < menuItems.length; i++) {
-//     menuItems[i].children[0].style.backgroundColor = "#000";
-//   }
-//   for (var i = 0; i < menuItems.length; i++) {
-//     if (currentURL === menuItems[i].href) {
-//       menuItems[i].children[0].style.backgroundColor = "#FF9900";
-//       break;
-//     }
-//   }  
-// }
-
 handle_menu = function() {
   document.getElementById("menu-icon").onclick = function() {menu_click()};
 
@@ -31,24 +17,16 @@ handle_menu = function() {
   }
 }
 
-execute = function() {
-  handle_menu();
-  // highlight_menu();
-  // document.getElementsByClassName("merchLink")[0].addEventListener("click", highlight_menu);
-  // document.getElementsByClassName("contactLink")[0].addEventListener("click", highlight_menu);
-}
-
-
 if (document.addEventListener)
   document.addEventListener("DOMContentLoaded", function(){
-    execute();
+    handle_menu();
   }, false)
 else if (document.all && !window.opera){
   document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>')
   var contentloadtag = document.getElementById("contentloadtag")
   contentloadtag.onreadystatechange = function(){
     if (this.readyState=="complete"){
-      execute();
+      handle_menu();
     }
   }
 }
@@ -1220,99 +1198,59 @@ window.onresize = function() {handle_menu()};
 * JQuery Main
 ***************************************/
 $(document).ready(function() {
-  $(".homeLink").click(function () {
-    $('#music').hide('slide', {direction: 'right'}, 500);
-    $('#shows').hide('slide', {direction: 'right'}, 500);
-    $('#blog').hide('slide', {direction: 'right'}, 500);
-    $('#bio').hide('slide', {direction: 'right'}, 500);
-    $('#merch').hide('slide', {direction: 'right'}, 500);
-    $('#contact').hide('slide', {direction: 'right'}, 500);
-    setTimeout(function () {
-      $('#home').show('slide', {direction: 'left'}, 500);
-    }, 500);
-  });
+  updatePage = function (page) {
+    link = $('#menu').find('.selected').parent().attr('class');
+    if (link === page) {
+      // Already on the page so do nothing
+    }
+    else {
+      $('.' + link).children().removeClass("selected");
+      $('.' + page).children().addClass("selected");
+      old_page = $('.' + link).attr('href');
+      $(old_page).hide('slide', {direction: 'right'}, 500);
+      new_page = $('#menu').find('.selected').parent().attr('href');
+      setTimeout(function () {
+        $(new_page).show('slide', {direction: 'left'}, 500);
+      }, 500);
+    }
+  }
 
-  $(".musicLink").click(function () {
-    $('#home').hide('slide', {direction: 'right'}, 500);
-    $('#shows').hide('slide', {direction: 'right'}, 500);
-    $('#blog').hide('slide', {direction: 'right'}, 500);
-    $('#bio').hide('slide', {direction: 'right'}, 500);
-    $('#merch').hide('slide', {direction: 'right'}, 500);
-    $('#contact').hide('slide', {direction: 'right'}, 500);
-    setTimeout(function () {
-      $('#music').show('slide', {direction: 'left'}, 500);
-    }, 500);
-  });
+  home = 'homeLink'
+  music = 'musicLink'
+  shows = 'showsLink'
+  blog = 'blogLink'
+  bio = 'bioLink'
+  merch = 'merchLink'
+  contact = 'contactLink'
 
-  $(".showsLink").click(function () {
-    $('#home').hide('slide', {direction: 'right'}, 500);
-    $('#music').hide('slide', {direction: 'right'}, 500);
-    $('#blog').hide('slide', {direction: 'right'}, 500);
-    $('#bio').hide('slide', {direction: 'right'}, 500);
-    $('#merch').hide('slide', {direction: 'right'}, 500);
-    $('#contact').hide('slide', {direction: 'right'}, 500);
-    setTimeout(function () {
-      $('#shows').show('slide', {direction: 'left'}, 500);
-    }, 500);
-  });
-
-  $(".blogLink").click(function () {
-    $('#home').hide('slide', {direction: 'right'}, 500);
-    $('#music').hide('slide', {direction: 'right'}, 500);
-    $('#shows').hide('slide', {direction: 'right'}, 500);
-    $('#bio').hide('slide', {direction: 'right'}, 500);
-    $('#merch').hide('slide', {direction: 'right'}, 500);
-    $('#contact').hide('slide', {direction: 'right'}, 500);
-    setTimeout(function () {
-      $('#blog').show('slide', {direction: 'left'}, 500);
-    }, 500);
-  });
-
-  $(".bioLink").click(function () {
-    $('#home').hide('slide', {direction: 'right'}, 500);
-    $('#music').hide('slide', {direction: 'right'}, 500);
-    $('#shows').hide('slide', {direction: 'right'}, 500);
-    $('#blog').hide('slide', {direction: 'right'}, 500);
-    $('#merch').hide('slide', {direction: 'right'}, 500);
-    $('#contact').hide('slide', {direction: 'right'}, 500);
-    setTimeout(function () {
-      $('#bio').show('slide', {direction: 'left'}, 500);
-    }, 500);
-  });
-
-  $(".merchLink").click(function () {
-    $('#home').hide('slide', {direction: 'right'}, 500);
-    $('#music').hide('slide', {direction: 'right'}, 500);
-    $('#shows').hide('slide', {direction: 'right'}, 500);
-    $('#blog').hide('slide', {direction: 'right'}, 500);
-    $('#bio').hide('slide', {direction: 'right'}, 500);
-    $('#contact').hide('slide', {direction: 'right'}, 500);
-    setTimeout(function () {
-      $('#merch').show('slide', {direction: 'left'}, 500);
-    }, 500);
-  });
-
-  $(".contactLink").click(function () {
-    $('#home').hide('slide', {direction: 'right'}, 500);
-    $('#music').hide('slide', {direction: 'right'}, 500);
-    $('#shows').hide('slide', {direction: 'right'}, 500);
-    $('#blog').hide('slide', {direction: 'right'}, 500);
-    $('#bio').hide('slide', {direction: 'right'}, 500);
-    $('#merch').hide('slide', {direction: 'right'}, 500);
-    setTimeout(function () {
-      $('#contact').show('slide', {direction: 'left'}, 500);
-    }, 500);
-  });
+  $('.' + home).click(function() {updatePage(home)});
+  $('.' + music).click(function() {updatePage(music)});
+  $('.' + shows).click(function() {updatePage(shows)});
+  $('.' + blog).click(function() {updatePage(blog)});
+  $('.' + bio).click(function() {updatePage(bio)});
+  $('.' + merch).click(function() {updatePage(merch)});
+  $('.' + contact).click(function() {updatePage(contact)});
 
   $('.flexslider').flexslider({
     animation: "slide"
   });
 
-  $('#accordion').find('.accordion-toggle').click(function(){
-    //Expand or collapse this panel
-    $(this).next().slideToggle('fast');
-
-    //Hide the other panels
-    $(".accordion-content").not($(this).next()).slideUp('fast');
+  $('#accordion_lyrics').find('.accordion-toggle').click(function(){
+    $(this).next().slideToggle('fast'); //Expand or collapse this panel
+    $(".accordion-content").not($(this).next()).slideUp('fast'); //Hide the other panels
   });
+
+  $('#accordion_blog').find('.accordion-toggle').click(function(){ 
+    $(this).next().slideToggle('fast'); //Expand or collapse this panel
+    $(".accordion-content").not($(this).next()).slideUp('fast'); //Hide the other panels
+  });
+
+  // $('#mask').click(function() {
+  //   $(this).effect('size', {to: {width: 200, height: 200}}, 1000);
+  // });
+
+  // $("#whisper").click(function(){
+  //    $("#whisper").effect( "size", 
+  //     { to: {width: 100,height: 100} }, 1000 );
+  // });
 });
