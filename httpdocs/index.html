@@ -5,12 +5,646 @@
         <title>The District Heat</title>
         <link rel="icon" href="styles/img/tdh_favicon.ico" type="image/png" />
         <link rel="stylesheet" href="styles/style.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>
+        <script src="audioplayerengine/amazingaudioplayer.js"></script>
+        <script src="audioplayerengine/initaudioplayer-1.js"></script>
     </head>
-    <body class="background">
-        <div class="cover">
-            <a href="main.html">
-                <img src="styles/img/album_cover.jpg">
-            </a>
-        <div>
+
+    <body>
+        <!--Header-->
+        <header id="header">
+            <nav>
+                <a id="menu-icon"></a>
+                <ul id="menu">
+                    <a href="#home" class='homeLink'><li class='selected'>HOME</li></a>
+                    <a href="#music" class='musicLink'><li>MUSIC</li></a>
+                    <a href="#lyrics" class='lyricsLink'><li>LYRICS</li></a>
+                    <a href="#shows" class='showsLink'><li>SHOWS</li></a>
+                    <a href="#blog" class='blogLink'><li>BLOG</li></a>
+                    <a href="#bio" class='bioLink'><li>BIO</li></a><!-- 
+                    <a href="#merch" class='merchLink'><li>MERCH</li></a> -->
+                    <a href="#contact" class='contactLink'><li>CONTACT</li></a>
+                </ul>
+            </nav>
+            <div class="social_media">
+                <a href="https://www.facebook.com/TheDistrictHeat" target="_blank">
+                    <img src="styles/img/icons/128/Facebook.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/A_DistrictTweet" target="_blank">
+                    <img src="styles/img/icons/128/Twitter.png" alt="Twitter">
+                </a>
+               <a href="http://instagram.com/thedistrictheat" target="_blank">
+                    <img src="styles/img/icons/128/Instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/user/TheDistrictHeat" target="_blank">
+                    <img src="styles/img/icons/128/Youtube.png" alt="YouTube">
+                </a>
+            </div>
+        </header>
+
+        <!--Home Page-->
+        <div id="home">
+            <p class="header">THE DISTRICT HEAT</p>
+            <h2>We make music</h2>
+            <div class="pictures"> 
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li>
+                      <img src="styles/img/viewer/1.jpg" />
+                    </li>
+                    <li>
+                      <img src="styles/img/viewer/2.jpg" />
+                    </li>
+                    <li>
+                      <img src="styles/img/viewer/3.jpg" />
+                    </li>
+                    <li>
+                      <img src="styles/img/viewer/4.jpg" />
+                    </li>
+                    <li>
+                      <img src="styles/img/viewer/5.jpg" />
+                    </li>
+                  </ul>
+                </div>
+            </div> 
+        </div>
+
+        <!--Music Page-->
+        <div id="music" style="display: none">
+            <div class="music">
+                <h1>WHAT YOU CAME FOR</h1>
+                <h3>Here's a few songs from the album you can stream for free!</h3>
+                <div class="player">
+                    <div id="amazingaudioplayer-1" style="display:block;position:relative;width:300px;height:164px;margin:0px auto 0px;">
+                        <ul class="amazingaudioplayer-audios" style="display:none;">
+                            <li data-artist="The District Heat" data-title="Mask" data-album="The District Heat" data-info="" data-image="styles/img/cover.jpg" data-duration="208">
+                                <div class="amazingaudioplayer-source" data-src="songs/Mask.mp3" data-type="audio/mpeg" />
+                            </li>
+                            <li data-artist="The District Heat" data-title="Slingshot Stride" data-album="The District Heat" data-info="" data-image="styles/img/cover.jpg" data-duration="187">
+                                <div class="amazingaudioplayer-source" data-src="songs/Slingshot Stride.mp3" data-type="audio/mpeg" />
+                            </li>
+                            <li data-artist="The District Heat" data-title="Wallflower" data-album="The District Heat" data-info="" data-image="styles/img/cover.jpg" data-duration="219">
+                                <div class="amazingaudioplayer-source" data-src="songs/Wallflower.mp3" data-type="audio/mpeg" />
+                            </li>
+                            <li data-artist="The District Heat" data-title="Sweet Sally" data-album="The District Heat" data-info="" data-image="styles/img/cover.jpg" data-duration="308">
+                                <div class="amazingaudioplayer-source" data-src="songs/Sweet Sally.mp3" data-type="audio/mpeg" />
+                            </li>
+                            <li data-artist="The District Heat" data-title="A Precarious Nature" data-album="The District Heat" data-info="" data-image="styles/img/cover.jpg" data-duration="312">
+                                <div class="amazingaudioplayer-source" data-src="songs/A Precarious Nature.mp3" data-type="audio/mpeg" />
+                            </li>
+                            <li data-artist="The District Heat" data-title="Moon Walking is for Giants" data-album="The District Heat" data-info="" data-image="styles/img/cover.jpg" data-duration="219">
+                                <div class="amazingaudioplayer-source" data-src="songs/Moon Walking is for Giants.mp3" data-type="audio/mpeg" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="badges">
+                    <div class="badge">
+                        <a href="https://play.google.com/store/music/album/The_District_Heat_The_District_Heat?id=B3chzllo3bzfdf7jt4xkmhz5tym&hl=en" target="_blank">
+                          <img alt="Get it on Google Play"
+                               src="styles/img/badges/google.png" />
+                        </a>
+                    </div>
+                    <div class="badge">         
+                        <a href="https://itunes.apple.com/us/album/the-district-heat/id936567387?ign-mpt=uo%3D4" target="_blank">
+                          <img alt="Available on iTunes"
+                               src="styles/img/badges/itunes.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Lyrics Page-->
+        <div id="lyrics" style="display: none">
+            <div class="lyrics" id="accordion_lyrics">
+                <h1>LYRICS</h1>
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">MASK</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>Follow the rainbow's eyes, in order to see the obvious me</br>Hidden among the lies, with so much to lose, well how do you choose?</p>
+                        </div>
+                        <div>
+                            <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</br> From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
+                        </div>
+                        <div>
+                            <p>Well, I've heard that one by one, a courteous mask is all we become</br> Like a worn out sun, whose use has gone now for everyone</p>
+                        </div>
+                        <div>
+                            <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</br> From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
+                        </div>
+                        <div>
+                            <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">SLINGSHOT STRIDE</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>Walking around with a steady, slingshot stride</br>Never aware of what is meant to be or how to take advice</br>When offered up you throw your hands up high and say, "Leave me alone!"</br>But you're not in control</p>
+                        </div>
+                        <div>
+                            <p>Trapped in a room you curse, swearing at the sky</br>Left with nobody else to blame but yourself because you are the</br>One who threw away the key that triggered your demise, so just leave me alone</br>'Cause you're not in control</p>
+                        </div>
+                        <div>
+                            <p>To keep that wound at bay</br>You need to sterilize, so man up and cauterize</br>But fear gets in the way</br>Only to prophesize the future of our demise</p>
+                        </div>
+                        <div>
+                            <p>Your ego in bloom and so apathy emanates</br>From every gaze that meets yours sweeping by</p>
+                        </div>
+                        <div>
+                            <p>To keep that wound at bay</br>You need to sterilize, so man up and cauterize</br>But fear gets in the way</br>Only to prophesize the future of our demise</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">WHISPER</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>Quiet voices that won't leave your head</br>Uncontrolled and best left unsaid</br>Parts you wish that you could shed</br>Shove in the ground and abandon for dead</p>
+                        </div>
+                        <div>
+                            <p>So you hide</br>Conceal yourself with pride</br>And pray you don't collide</br>But why would you abide</br>Just take a stance and let it ride</p>
+                        </div>
+                        <div>
+                            <p>Isolation, you're cut off it seems</br>Another outcast living off dreams</br>No signs of pity directed at you</br>Reclusive wretch; what else can you do?</p>
+                        </div>
+                        <div>
+                            <p>So you hide</br>Conceal yourself with pride</br>And pray you don't collide</br>But why would you abide</br>Just take a stance and let it ride</p>
+                        </div>
+                        <div>
+                            <p>It's just a whisper, nothing at all</br>But its effect is one that precedes your fall</br>Shoved in a cage and now your back's to the wall</br>The secret is out so will you stand tall or crawl?</p>
+                        </div>
+                        <div>
+                            <p>Just take a stance and let it ride</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">ALL OR NOTHING</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>What's one more feather on the scale?</br>I'm sure that it won't make a difference</br>Your arguments are getting stale</br>God you seem vain when you feign indifference</p>
+                        </div>
+                        <div>
+                            <p>We are all fighting a war</br>That we didn't even know we signed up for</br>We are all fighting a war</p>
+                        </div>
+                        <div>
+                            <p>Thrown into the spotlight only when you fail</br>When you're just living life, no one cares</br>Taught not to think and never step beyond the rails</br>But kick down the door, it doesn't matter who stares</p>
+                        </div>
+                        <div>
+                            <p>We are all fighting a war</br>That we didn't even know we signed up for</br>We are all fighting a war</br>We are all fighting a war           (It's a matter of all or nothing)</br>That we didn't even know we signed up for   (Make your choice, what are you living for?)</br>We are all fighting a war           (We are all fighting a war)</p>
+                        </div>
+                        <div>
+                            <p>We are all fighting a war</br>That we didn't even know we signed up for</br>We are all fighting a war</br>We are all fighting a war           (It's a matter of all or nothing)</br>That we didn't even know we signed up for   (Make your choice, what are you living for?)</br>We are all fighting a war           (We are all fighting a war)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">WALLFLOWER</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>I wake up a ghost, believed in by some</br>But by the most, I'm the wisp of a gun</br>Shot in a room, silent as the night</br>Sucked up all too soon, never chanced to glow bright</p>
+                        </div>
+                        <div>
+                            <p>To be honest I don't mind</br>It's not my loss that you are blind</p>
+                        </div>
+                        <div>
+                            <p>Never thought to be, anywhere at all</br>Surprised when you see, branches in the fall</br>Clawing at the sky, fading into gloom</br>Everyone walks by, until the next time they bloom</p>
+                        </div>
+                        <div>
+                            <p>To be honest I don't mind</br>It's not my loss that you are blind</br>To be honest I don't mind</br>Though it’s not easy to define</p>
+                        </div>
+                        <div>
+                            <p>Every day you wait is a chance evaded</br>Pretty soon you'll seal your fate in</br>You will be so good at that nine to five</br>That you might forget you're even alive</p>
+                        </div>
+                        <div>
+                            <p>To be honest I don't mind</br>It's not my loss that you are blind</br>To be honest I don't mind</br>Though it’s not easy to define</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">SWEET SALLY</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>It's what you say with your eyes</br>The way you brush off the lies</br>You keep their hearts in your pocket</br>Just don't forget now to lock it</p>
+                        </div>
+                        <div>
+                            <p>You keep 'em two at a time</br>They worship you like a shrine</br>And when they think that you want it</br>That's when you straight up and drop it</br>Down, down, down, down</p>
+                        </div>
+                        <div>
+                            <p>It's an emotional high</br>Like pulling wings off a fly</br>An enormous assertion</br>Of a villainous person</p>
+                        </div>
+                        <div>
+                            <p>What is love but a game? (Shot without any aim)</br>That you don't have any shame (Is never something you'd claim)</br>And when they think that you want it (That's when you know that you've got it)</br>That's when you straight up and drop it</br>Down, down, down, down</p>
+                        </div>
+                        <div>
+                            <p>Quiet eyes are her disguise</br>Quiet eyes hide her lies</br>Lies will be her demise</br>Sweet Sally makes them cry</br>Do you know, do you know, do you know what you do?</br>Do you know, do you know, is it all about you?</br>Quiet eyes</p>
+                        </div>
+                        <div>
+                            <p>Behind those bright, baby blues (Shiny, pointy-toed shoes)</br>There’s just another excuse (That's right ‘cause running's no use)</br>And when you know that you've got it (That's when they think that you want it)</br>That's when you straight up and drop it</br>Down, down, down, down</p>
+                        </div>
+                        <div>
+                            <p>Quiet eyes are her disguise</br>Quiet eyes hide her lies</br>Lies will be her demise</br>Sweet Sally makes them cry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">A PRECARIOUS NATURE</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>All manner of things, circle around my head</br>And their lines hazy, I don't feel well</br>Can somebody fill my glass up? I'm slippin'...</br>So very afraid, of living...</p>
+                        </div>
+                        <div>
+                            <p>An elliptical line, it's no wonder we can't walk straight</br>So clearly defined, well I can relate</br>Can somebody fill my glass up? I'm trippin'...</br>So very afraid, yeah</p>
+                        </div>
+                        <div>
+                            <p>Just to survive</br>Another day to be alive</br>Just tell me why</br>You don't ever wanna die?</p>
+                        </div>
+                        <div>
+                            <p>When there's nothing left to name, what'll happen to the game?</br>The ones who lost aren't any worse off</p>
+                        </div>
+                        <div>
+                            <p>The rope that keeps us all together</br>Is starting to wear, to wear and fray</br>Once it's gone I don't know whether</br>We'll diffuse apart, or deposition and stay</p>
+                        </div>
+                        <div>
+                            <p>We're all fighting</br>Just to survive</br>Another day to be alive</br>Just tell me why</br>You don't ever wanna die?</p>
+                        </div>
+                        <div>
+                            <p>The ceiling's unstable, pretty soon the weather might just come in</br>Unbridled exposure, a mother's kiss</br>Can somebody fill my glass up? I'm wincin'...</br>So very afraid...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">MOON WALKING IS FOR GIANTS</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>How can I explain that there's nothing left to gain</br>When rage has come to claim you</br>Hypocritical, I know, but I still told you so</br>Just let it wash away</p>
+                        </div>
+                        <div>
+                            <p>Take a breath</br>Release that stress</br>It's not that bad</p>
+                        </div>
+                        <div>
+                            <p>No matter how it goes</br>Don't let it overflow</br>Never let it show</br>Don't ever let it go</br>Don't let it overflow</br>Never let it show</br>Don't ever let it go</p>
+                        </div>
+                        <div>
+                            <p>Mysterious in a way, well it commands and you obey</br>Directing how you feel</br>Just unfocus a bit; realize you can control it</br>Don't let it run away</p>
+                        </div>
+                        <div>
+                            <p>No matter how it goes</br>Don't let it overflow</br>Never let it show</br>Don't ever let it go</br>Don't let it overflow</br>Never let it show</br>Don't ever let it go</p>
+                        </div>
+                        <div>
+                            <p>Take a breath</br>Release that stress</br>It's not that bad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">BLACK AND WHITE</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>And it starts the way we all expect</br>Boy meets girl, you know the rest</br>It's what comes after we are never told</br>That fatal flaw is getting, is getting old</p>
+                        </div>
+                        <div>
+                            <p>It's not to say there's no way around</br>The falls you'll take leave something to be found</br>Storms coexist with all spectrums of wonder</br>Without a mess the canvas has lost all of its colour</p>
+                        </div>
+                        <div>
+                            <p>So we do it again, and again, and again</p>
+                        </div>
+                        <div>
+                            <p>We make our jokes, then we hope it all just goes away</br>We debase and deface to help pretend it's all ok</br>We make our jokes, then we hope it all just goes away</br>We debase and deface to help pretend it's all ok</p>
+                        </div>
+                        <div>
+                            <p>So convinced it will be alright</br>Tragedy ends when you turn on the light</br>It's hard to learn the world is not forgiving</br>It's hard to see the tight rope we are living</p>
+                        </div>
+                        <div>
+                            <p>We can't erase the mistakes and the pain that goes along</br>With what we make when we take a chance and it all goes wrong</br>But there's still time, always time to react before you're gone</br>Take it up now, before your will is no longer strong</p>
+                        </div>
+                        <div>
+                            <p>So we do it again, and again, and again</p>
+                        </div>
+                        <div>
+                            <p>We make our jokes, then we hope it all just goes away</br>We debase and deface to help pretend it's all ok</br>We make our jokes, then we hope it all just goes away</br>We debase and deface to help pretend it's all ok</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">STREETLIGHTS</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>From this window I see</br>Endless streetlights fading</br>I feel alone as the night, it starts to fade away</br>Off in the distance the sun, it ends its masquerade</p>
+                        </div>
+                        <div>
+                            <p>I know that soon I'll be safe and sound</br>The light will blossom and then take root in the ground</br>But for the moment I'm scared as my thoughts start to unroll</br>No one is there and I think I might just lose control</p>
+                        </div>
+                        <div>
+                            <p>Lost, all alone I am lost</br>Far from home I am lost</br>Getting scared 'cause I'm lost</br>No one's there I am lost</br>All alone I am lost</br>Far from home I am lost</br>Getting scared 'cause I'm lost</p>
+                        </div>
+                        <div>
+                            <p>Help me out, I don't feel right</br>I need a hand, it's just one night</br>The dark, it used to scare me now it's not so bad</br>My mind, it is a big place but it's all I have</br>Help me out, help me out, help me out</br>Help me out, help me out, help me out</p>
+                        </div>
+                        <div>
+                            <p>Why would you leave me I’ve got nothing left</br>Just stuck here in the darkness all by myself</br>My fears are all around me, I just watch them grow</br>My world’s a vicious cycle and all that I’ve ever known</p>
+                        </div>
+                        <div>
+                            <p>Help me out, I’m going down</br>I need a hand, but no one’s around</br>The dark it used to scare me now it's all I have</br>Comfort in the darkness, a friend at last</br>Help me out, help me out, help me out</br>Help me out, help me out, help me out</p>
+                        </div>
+                        <div>
+                            <p>Oh please, help me out of this unending cycle</br>Oh please, help me out of this unending cycle</br>Oh please, can somebody help me</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Shows Page-->
+        <div id="shows" style="display: none">
+            <div class='shows'>
+                <h1>UPCOMING SHOWS</h1>
+<!--                 <div class='shows_container'>
+                    <div class='show'>
+                        <a href="http://www.dickenspub.ca/" target="_blank">
+                            <img src="styles/img/dickens_logo.png" alt="Dickens Pub"></a>
+                        <p>Nov 8, 2014</p>
+                    </div>
+                    <div class='show'>
+                        <a href="http://blindbeggarpub.com/" target="_blank">
+                            <img src="styles/img/blind_beggar_logo.jpg" alt="Blind Beggar Pub"></a>
+                        <p>Nov 29, 2014</p>
+                    </div>
+                </div> -->
+                <div class='shows_container'>
+                    <div class='show'>
+                        <a href="http://http://oclstudios.com/" target="_blank">
+                            <img src="styles/img/venues/ocl_logo.jpg" alt="OCL Studios"></a>
+                        <p>Jan 10, 2014</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="past_shows">
+                <h1>PAST SHOWS</h1>
+                <div class="past_show">
+                    <p>November 28, 2014</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE BLIND BEGGAR</p>
+                </div>
+                <div class="past_show">
+                    <p>November 8, 2014</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">DICKENS PUB</p>
+                </div>
+                <div class="past_show">
+                    <p>June 27, 2014</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">VERN'S BAR</p>
+                </div>
+                <div class="past_show">
+                    <p>December 28, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE POWDERHORN SALOON</p>
+                </div>
+                <div class="past_show">
+                    <p>October 5, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE UNICORN PUB</p>
+                </div>
+                <div class="past_show">
+                    <p>August 17, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">WORLD BIER HAUS 1600</p>
+                </div>
+                <div class="past_show">
+                    <p>August 3, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE UNICORN PUB</p>
+                </div>
+                <div class="past_show">
+                    <p>June 1, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">STUDIO 37</p>
+                </div>
+                <div class="past_show">
+                    <p>April 5, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">HSCA</p>
+                </div>
+                <div class="past_show">
+                    <p>March 17, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">SWIGS PUB & GRILL</p>
+                </div>
+                <div class="past_show">
+                    <p>Feb 17, 2013</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE BLIND BEGGAR</p>
+                </div>
+                <div class="past_show">
+                    <p>Dec 21, 2012</p>
+                    <p>Calgary, AB</p>
+                    <p class="venue">THE BLIND BEGGAR</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Blog Page-->
+        <div id="blog" style="display: none">
+            <div class="blog" id="main_blog">
+                <h1>WE'RE BACK!</h1>
+                <div>
+                    <h3>January 7th, 2014</h3>
+                </div>
+                <div>
+                    <img src="styles/img/album_cover.jpg" align="left" alt="Album Cover" height="200px" width="200px">
+                    <p>It seems like we’ve been away for quite a while, however we have been hard at work on our debut album. Between writing, recording, editing, working on artwork and all the other behind the scenes work that goes into making a record we’ve been very busy. We are beyond excited to share the fruits of our labour with you. We’ll be selling the album, along with some other accompanying merchandise, at all of our upcoming shows. Can’t make it out? Don’t worry, the album is available online in places like Amazon and iTunes (check out the Music page)!</p>
+                </div>
+                <div>
+                    <p>As you may have noticed we now have an official website, courtesy of our tech guru, Mr. Francis Levesque. On the website you’ll be able to find lyrics, bios, available merchandise, past and upcoming shows as well as this blog! We’ll update the blog with upcoming events, reflections on past events or just anything we feel the need to share with you to keep our amazing fans in the loop. As we grow as a band, the website will grow and change with us, so keep your eyes peeled for updates.</p>
+                </div>
+                <div>
+                    <p>It’s been a long time, but damn, it feels good to be back. Let’s do this thing.</p>
+                </div>
+                <div>
+                    <p>Sean</p>
+                </div>
+            </div>
+            <!-- <hr>
+            <div class="archive" id="accordion_blog">
+                <h1>ARCHIVES</h1>
+                <div id="bar" class="accordion-toggle">
+                    <div id="title">We're Back!</div>
+                    <div id="date">November 9th, 2014</div>
+                </div>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <img src="styles/img/album_cover.jpg" align="left" alt="Album Cover" height="200px" width="200px">
+                        <p>textextext</p>
+                    </div>
+                </div>
+            </div> 
+
+
+
+
+</br>
+            </br>
+            </br>
+            <div class="video">
+                <div>
+                    <h1 class="video-header">WE MADE A MOVIE!</h1>
+                </div>
+                <div>
+                    <h3>The 'making-of' movie for our single Slingshot Stride. Enjoy!</h3>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/oUzj7WniLGc?wmode=transparent" frameborder="0"></iframe>
+                </div>
+            </div>
+
+
+
+        -->
+        </div>
+
+        <!--Bio Page-->
+        <div id="bio" style="display: none">
+            <div class="bio">
+                <h1>WHO ARE WE?</h1>
+                <p>After a few months out of the spotlight, The District Heat is returning to the stage with their debut album. It only takes a glance to see that their energy and enthusiasm on stage is a reflection of how much they love what they do. With a sound described as everything from the Foo Fighters to The Shins, the band blends their diverse influences into a modern rock feel. Beatroute has described them as "bluesy rock with pop sensibility". This meld of genres has given The District Heat a very unique sound that has qualities everyone can enjoy.</p>
+            </div>
+            <div class="self_bios">
+                <div class='self_bio_container'>
+                    <div class='self_bio'>
+                        <h3>SEAN SWANTON</h3>
+                        <img src="styles/img/bio/sean.jpg" alt="Sean">
+                        <p>LEAD GUITAR, VOCALS</p>
+                    </div>
+                    <div class='self_bio'>
+                        <h3>STEW BURY-JONES</h3>
+                        <img src="styles/img/bio/stew.jpg" alt="Stew">
+                        <p>DRUMS</p>
+                    </div>
+                    <div class='self_bio'>
+                        <h3>BRANDON GREER</h3>
+                        <img src="styles/img/bio/brandon.jpg" alt="Brandon">
+                        <p>BASS</p>
+                    </div>
+                    <div class='self_bio'>
+                        <h3>FRANCIS LEVESQUE</h3>
+                        <img src="styles/img/bio/francis.jpg" alt="Francis">
+                        <p>LEAD VOCALS, GUITAR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Merch Page-->
+        <div id="merch" style="display: none">
+            <div class="merch">
+                <h1>BUY OUR STUFF!</h1>
+                <h3>All our merchandize is available at all of our shows</h3>
+                </br>
+                <h3 id="left">CDs</h3>
+                <div class='items'>
+                    <div class='item_container' id="cd" style="background-image: url('styles/img/merch/cds.jpg');">
+                        <div class="item" id="cd">
+                            <p>Oh my god, so many CDs...</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 id="left">T-shirts</h3>
+                <div class='items'>
+                    <div class='item_container' id="shirt" style="background-image: url('styles/img/merch/shirt3_black.jpg');">
+                        <div class="item" id="shirt">
+                            <p>All American Apparel, all the time!</p>
+                        </div>
+                    </div>
+                    <div class='item_container' id="shirt" style="background-image: url('styles/img/merch/shirt2_white.jpg');">
+                        <div class="item" id="shirt">
+                            <p>Second generation shirts designed by Claire Levesque</p>
+                        </div>
+                    </div> 
+                    <div class='item_container' id="shirt" style="background-image: url('styles/img/merch/shirt1_red.jpg');">
+                        <div class="item" id="shirt">
+                            <p>First generation shirt!</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 id="left">Buttons</h3>
+                <div class='items'>
+                    <div class='item_container' id="button" style="background-image: url('styles/img/merch/button.jpg');">
+                        <div class="item" id="button">
+                            <p>Buttons are the bomb!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Contact Page-->
+        <div id="contact" style="display: none">
+            <div class="contact">
+                <h1 id="wow" class="wow">GET IN TOUCH</h1>
+                <img src="styles/img/contact/the_band3.jpg" alt="The District Heat">
+                <h3>Send us a message in any of the following ways:</h3> 
+                <div class="icons">
+                    <div class='icon'>
+                        <a href="mailto:thedistrictheat@gmail.com" target="_blank">
+                            <img src="styles/img/icons/128/Email.png" alt="Email">
+                        </a>
+                    </div>
+                    <div class='icon'>
+                        <a href="https://www.facebook.com/TheDistrictHeat" target="_blank">
+                            <img src="styles/img/icons/128/Facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class='icon'>
+                        <a href="https://twitter.com/A_DistrictTweet" target="_blank">
+                            <img src="styles/img/icons/128/Twitter.png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class='footer'>
+            <div class="copyright">
+                <p>© 2014 STEW BURY-JONES, BRANDON GREER, FRANCIS LEVESQUE, AND SEAN SWANTON.</p>
+            </div>
+        </div>
     </body>
 </html>

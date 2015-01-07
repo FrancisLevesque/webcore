@@ -1217,6 +1217,7 @@ $(document).ready(function() {
 
   home = 'homeLink'
   music = 'musicLink'
+  lyrics = 'lyricsLink'
   shows = 'showsLink'
   blog = 'blogLink'
   bio = 'bioLink'
@@ -1225,6 +1226,7 @@ $(document).ready(function() {
 
   $('.' + home).click(function() {updatePage(home)});
   $('.' + music).click(function() {updatePage(music)});
+  $('.' + lyrics).click(function() {updatePage(lyrics)});
   $('.' + shows).click(function() {updatePage(shows)});
   $('.' + blog).click(function() {updatePage(blog)});
   $('.' + bio).click(function() {updatePage(bio)});
@@ -1244,13 +1246,4 @@ $(document).ready(function() {
     $(this).next().slideToggle('fast'); //Expand or collapse this panel
     $(".accordion-content").not($(this).next()).slideUp('fast'); //Hide the other panels
   });
-
-  // $('#mask').click(function() {
-  //   $(this).effect('size', {to: {width: 200, height: 200}}, 1000);
-  // });
-
-  // $("#whisper").click(function(){
-  //    $("#whisper").effect( "size", 
-  //     { to: {width: 100,height: 100} }, 1000 );
-  // });
 });
