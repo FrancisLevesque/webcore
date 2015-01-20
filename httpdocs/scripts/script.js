@@ -1,20 +1,20 @@
 /***************************************
 * Menu Handling
 ***************************************/
+menu_click = function() {
+  if (menu.hasAttribute("class")) {
+    menu.removeAttribute("class")
+  }
+  else {
+    menu = document.getElementById("menu")
+    attribute = document.createAttribute("class")
+    attribute.value = "active"
+    menu.setAttributeNode(attribute)  
+  }
+}
+
 handle_menu = function() {
   document.getElementById("menu-icon").onclick = function() {menu_click()};
-
-  function menu_click() {
-    if (menu.hasAttribute("class")) {
-      menu.removeAttribute("class")
-    }
-    else {
-      menu = document.getElementById("menu")
-      attribute = document.createAttribute("class")
-      attribute.value = "active"
-      menu.setAttributeNode(attribute)  
-    }
-  }
 }
 
 if (document.addEventListener)
@@ -1213,6 +1213,7 @@ $(document).ready(function() {
         $(new_page).show('slide', {direction: 'left'}, 500);
       }, 500);
     }
+    menu_click();
   }
 
   home = 'homeLink'
