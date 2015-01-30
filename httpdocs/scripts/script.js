@@ -1198,6 +1198,7 @@ window.onresize = function() {handle_menu()};
 * JQuery Main
 ***************************************/
 $(document).ready(function() {
+
   updatePage = function (page) {
     link = $('#menu').find('.selected').parent().attr('class');
     if (link === page) {
@@ -1213,8 +1214,21 @@ $(document).ready(function() {
         $(new_page).show('slide', {direction: 'left'}, 500);
       }, 500);
     }
-    menu_click();
+    if (menu.hasAttribute("class")) {
+      menu.removeAttribute("class")
+    }
   }
+
+  loadRequestedPage = function() {
+    if(document.URL.includes('#')) {
+      url = document.URL;
+      page = url.substring(url.lastIndexOf('#') + 1, url.length);
+      pageName = page + 'Link';
+      updatePage(pageName);
+    }
+  }
+
+  loadRequestedPage();
 
   home = 'homeLink'
   music = 'musicLink'
@@ -1223,6 +1237,7 @@ $(document).ready(function() {
   blog = 'blogLink'
   bio = 'bioLink'
   merch = 'merchLink'
+  press = 'pressLink'
   contact = 'contactLink'
 
   $('.' + home).click(function() {updatePage(home)});
@@ -1232,7 +1247,20 @@ $(document).ready(function() {
   $('.' + blog).click(function() {updatePage(blog)});
   $('.' + bio).click(function() {updatePage(bio)});
   $('.' + merch).click(function() {updatePage(merch)});
+  $('.' + press).click(function() {updatePage(press)});
   $('.' + contact).click(function() {updatePage(contact)});
+
+  showLyrics = function (song) {
+    link = $('#menu').find('.selected').parent().attr('class');
+    old_page = $('.' + link).attr('href');
+    $(old_page).hide('slide', {direction: 'right'}, 500);
+    new_page = $('#mask');
+    setTimeout(function () {
+      $(new_page).show('slide', {direction: 'left'}, 500);
+    }, 500);
+  }
+
+  $('.maskLyrics').click(function() {showLyrics('mask')});
 
   $('.flexslider').flexslider({
     animation: "slide"

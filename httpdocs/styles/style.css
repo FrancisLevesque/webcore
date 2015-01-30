@@ -30,8 +30,6 @@ body {
     height: 100%;
 	border: 0;
 	margin: 0 auto 32px;
-
-/*	background-color: rgba(0,0,0,0.4);*/
 }
 
 /*MEDIA QUERY*/
@@ -443,6 +441,14 @@ a li {
 	padding-bottom: 40px;
 }
 
+
+
+
+
+
+
+
+
 @media only screen and (max-width : 820px) {
 	.lyrics div div img {
 		height: 200px;
@@ -550,20 +556,35 @@ a li {
 	padding-top: 64px;
 }
 
-.main_blog div, .archive div div {
-	display: inline-block;
+.date {
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.blog div {
 	padding: 1% 0;
 }
 
-.main_blog div img, .archive div div img {
-	display: inline-block;
+.blog div img {
 	padding-right: 2%;
 }
 
-.main_blog div p, .archive div div p {
-	display: inline;
+.blog div p {
+	display: block;
 	padding: 0;
-	font-size: 18px;
+}
+
+.archive div div {
+	padding: 1% 0;
+}
+
+.archive div div img {
+	padding-right: 2%;
+}
+
+.archive div div p {
+	display: block;
+	padding: 0;
 }
 
 .accordion-toggle 
@@ -620,45 +641,14 @@ a li {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
-.video-header {
-	padding-top: 1%;
-	padding-bottom: 1%;
-}
-
-.video div {
-	display: block;
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 52%;
-    height: 0; 
-    overflow: hidden;
-    margin: 0;
-}
- 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
 @media only screen and (max-width : 820px) {
-	.main_blog h3 {
+	.blog h3 {
 		text-align: none;
 	}
 
-	.main_blog div img, .archive div div img {
+	.blog div img, .archive div div img {
 		height: 200px;
 		width: 200px;
-	}
-
-	.main_blog div p, .archive div div p {
-		font-size: 16px;
 	}
 }
 
@@ -826,6 +816,21 @@ a li {
 }
 
 /***************************************
+* Press Styling
+***************************************/
+#press {
+	padding-top: 64px;
+}
+
+.quotes {
+	margin-bottom: 70px;
+}
+
+.quote {
+	font-size: 16px;
+}
+
+/***************************************
 * Contact Styling
 ***************************************/
 #contact {
@@ -881,11 +886,37 @@ a li {
 }
 
 /***************************************
+* Video Styling
+***************************************/
+.video div {
+	display: block;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 52%;
+    height: 0; 
+    overflow: hidden;
+    margin: 0;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/***************************************
 * Blockquotes Styling
 ***************************************/
 blockquote {
   quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -894,14 +925,16 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote:after {
   color: #ccc;
   content: close-quote;
   font-size: 4em;
   line-height: 0.1em;
   margin-left: 0.25em;
-  vertical-align: -0.4em;
+  vertical-align: -0.5em;
 }
+
 blockquote p {
   display: inline;
 }
