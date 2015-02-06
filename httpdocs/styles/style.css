@@ -80,7 +80,7 @@ h3 {
 
 p {
 	display: inline-block;
-	color: #333;
+	color: white;
 	font-weight: 300; 
 	font-size: 14px;
 	font-family: "Open Sans", serif;
@@ -106,6 +106,12 @@ a:link, a:visited, a:hover, a:active {
 	hr {
 		margin: auto;
 		width: 90%;
+	}
+}
+
+@media only screen and (max-width : 600px) {
+	html {
+		background-size: inherit;
 	}
 }
 
@@ -660,15 +666,7 @@ a li {
 }
 
 .bio {	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	margin: 0 auto 60px;
-}
-
-.bio h1, p {
-	color: white;
 }
 
 .bio p {
@@ -676,49 +674,38 @@ a li {
 	padding-right: 6%;
 }
 
-.self_bios {
-	text-align: center;
-}
-
 .self_bio {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 
 	height: 280px;
-	width: 210px;
+	width: 200px;
 	display: inline-block;
 	vertical-align:top;
+	margin: 0 6px;
 }
 
-.self_bio img {
-	height: 200px;
-	width: 200px;
-
-	-webkit-filter: contrast(85%);
-	-moz-filter: contrast(85%);
-	-o-filter: contrast(85%);
-	-ms-filter: contrast(85%);
-	filter: contrast(85%);
-
-    -webkit-transition: all 0.25s ease;
-       -moz-transition: all 0.25s ease;
-         -o-transition: all 0.25s ease;
-        -ms-transition: all 0.25s ease;
-            transition: all 0.25s ease;
+#frame {
+    height: 200px;
+    width: 200px;
 }
 
-.self_bio img:hover {
-	-webkit-filter: contrast(100%);
-	-moz-filter: contrast(100%);
-	-o-filter: contrast(100%);
-	-ms-filter: contrast(100%);
-	filter: contrast(100%);
+.overlay {
+	background-color: black;
+	opacity: 0.0;
+    position: absolute;
+    text-align: center;
 }
 
-.self_bio p {
-	display: block;
-	text-align: center;
-	padding: 0;
+.overlay p {
+	position: relative;
+	padding: 6px 0;
+	top: 10%;
+	line-height: 20px;
+}
+
+.overlay:hover {
+	opacity: 0.7;
 }
 
 @media only screen and (max-width : 852px) {

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="The District Heat is a Calgary based, indie-rock band. Their driving guitars and funky rhythms echo the energy that cascades from the stage at everyone of their shows.">
+        <meta name="description" content="The District Heat is a Calgary based, indie-rock band. Their driving guitars and funky rhythms echo the energy that cascades from the stage at every one of their shows.">
         <title>The District Heat</title>
         <link rel="icon" href="styles/img/tdh_favicon.ico" type="image/png" />
         <link rel="stylesheet" href="styles/style.css" type="text/css" />
@@ -21,8 +21,8 @@
                     <a href="#bio" class='bioLink'><li>BIO</li></a> 
                     <a href="#music" class='musicLink'><li>MUSIC</li></a>
                     <a href="#lyrics" class='lyricsLink'><li>LYRICS</li></a>
-                    <a href="#shows" class='showsLink'><li>SHOWS</li></a>
                     <a href="#press" class='pressLink'><li>PRESS</li></a>
+                    <a href="#shows" class='showsLink'><li>SHOWS</li></a>
                     <a href="#contact" class='contactLink'><li>CONTACT</li></a>
                 </ul>
             </nav>
@@ -74,27 +74,54 @@
         <div id="bio" style="display: none">
             <div class="bio">
                 <h1>WHO ARE WE?</h1>
-                <p>After a few months out of the spotlight, The District Heat is returning to the stage with their debut album. It only takes a glance to see that their energy and enthusiasm on stage is a reflection of how much they love what they do. With a sound described as everything from the Foo Fighters to The Shins, the band blends their diverse influences into a modern rock feel. Beatroute has described them as "bluesy rock with pop sensibility". This meld of genres has given The District Heat a very unique sound that has qualities everyone can enjoy.</p>
+                <p>After a few months out of the spotlight, The District Heat is returning to the stage with their debut album. It only takes a glance to see that their <i>energy and enthusiasm</i> on stage is a reflection of how much they <i>love what they do</i>.
+                </p>
+                <p>With a sound described as everything from the <b>Foo Fighters</b> to <b>The Shins</b>, the band blends their diverse influences into a modern rock feel. <b>Beatroute</b> has described them as "bluesy rock with pop sensibility". This meld of genres has given The District Heat a very unique sound that has qualities everyone can enjoy.
+                </p>
             </div>
             <div class="self_bios">
                 <div class='self_bio'>
                     <h2>SEAN SWANTON</h2>
-                    <img src="styles/img/bio/sean.jpg" alt="Sean">
+                    <div id='frame' style="background-image: url('styles/img/bio/sean.jpg');">
+                        <div class='overlay' id='frame'>
+                            <p>&quot;Sorry, what?&quot; - Stew</p>
+                            <p>&quot;He gave me this shirt.&quot; - Francis</p>
+                            <p>&quot;I hear he likes buying tights.&quot; - Brandon</p>
+                        </div>
+                    </div>
                     <h3>LEAD GUITAR, VOCALS</h3>
                 </div>
                 <div class='self_bio'>
                     <h2>STEW BURY-JONES</h2>
-                    <img src="styles/img/bio/stew.jpg" alt="Stew">
+                    <div id='frame' style="background-image: url('styles/img/bio/stew.jpg');">
+                        <div class='overlay' id='frame'>
+                            <p>&quot;He's pretty funny.&quot; - Francis</p>
+                            <p>&quot;He likes celestial bodies if you know what I mean...? No, like stars and planets and stuff.&quot; - Brandon</p>
+                            <p>&quot;Yeah, he's an alright drummer I guess.&quot; - Sean</p>
+                        </div>
+                    </div>
                     <h3>DRUMS</h3>
                 </div>
                 <div class='self_bio'>
                     <h2>BRANDON GREER</h2>
-                    <img src="styles/img/bio/brandon.jpg" alt="Brandon">
+                    <div id='frame' style="background-image: url('styles/img/bio/brandon.jpg');">
+                        <div class='overlay' id='frame'>
+                            <p>&quot;He's a nice dresser.&quot; - Sean</p>
+                            <p>&quot;Sorry, I wasn't paying attention.&quot; - Stew</p>
+                            <p>&quot;He's the bass player, right?&quot; - Francis</p>
+                        </div>
+                    </div>
                     <h3>BASS</h3>
                 </div>
                 <div class='self_bio'>
                     <h2>FRANCIS LEVESQUE</h2>
-                    <img src="styles/img/bio/francis.jpg" alt="Francis">
+                    <div id='frame' style="background-image: url('styles/img/bio/francis.jpg');">
+                        <div class='overlay' id='frame'>
+                            <p>&quot;Something about hacking?&quot; - Brandon</p>
+                            <p>&quot;He's always doing stuff with those computer things.&quot; - Sean</p>
+                            <p>&quot;Who?&quot; - Stew</p>
+                        </div>
+                    </div>
                     <h3>LEAD VOCALS, GUITAR</h3>
                 </div>
             </div>
@@ -147,40 +174,31 @@
 
         <!--Lyrics Page-->
         <div id="lyrics" style="display: none">
-
-            <h1>LYRICS</h1>
-            <img src="styles/img/lyrics/full.png" width="800px" height="800px" usemap="#heart">
-            <map name="heart">
-                <area shape="poly" coords="0,0, 82,126, 0,126" class="maskLyrics" href="#mask">
-            </map>
-        </div>
-
-
-
-
-        <!--Mask Lyrics Page-->
-        <div id="mask" style="display: none">
-            <h1>LYRICS</h1>
-            <div>
-                <div>
-                    <p>Follow the rainbow's eyes, in order to see the obvious me</br>Hidden among the lies, with so much to lose, well how do you choose?</p>
+            <div class="lyrics" id="accordion_lyrics">
+                <h1>LYRICS</h1>
+               <div id="bar" class="accordion-toggle">
+                    <h2 id="title">MASK</h2>
                 </div>
-                <div>
-                    <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</br> From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
+                <div id="content" class="accordion-content">
+                    <div>
+                        <div>
+                            <p>Follow the rainbow's eyes, in order to see the obvious me</br>Hidden among the lies, with so much to lose, well how do you choose?</p>
+                        </div>
+                        <div>
+                            <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</br> From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
+                        </div>
+                        <div>
+                            <p>Well, I've heard that one by one, a courteous mask is all we become</br> Like a worn out sun, whose use has gone now for everyone</p>
+                        </div>
+                        <div>
+                            <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</br> From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
+                        </div>
+                        <div>
+                            <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p>Well, I've heard that one by one, a courteous mask is all we become</br> Like a worn out sun, whose use has gone now for everyone</p>
-                </div>
-                <div>
-                    <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</br> From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
-                </div>
-                <div>
-                    <p>From way up high there's nothing but lies</br> Merely a lie that severs the ties</p>
-                </div>
-            </div>
-        </div>
-
-            <!--    <div id="bar" class="accordion-toggle">
+               <div id="bar" class="accordion-toggle">
                     <h2 id="title">SLINGSHOT STRIDE</h2>
                 </div>
                 <div id="content" class="accordion-content">
@@ -422,7 +440,29 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
+        </div>
+
+        <!--Press Page-->
+        <div id="press" style="display: none">
+            <div class="press">
+                <h1>WE'RE FAMOUS!</h1>
+                <div class="quotes">
+                    <blockquote>
+                        <p class="quote">
+                            [The] District Heat released their self-titled album that night and kicked the evening off with a bang, playing <i>bluesy rock</i> with <i>pop sensibility</i> and mixing in <b>more harmonies than The Beatles could shake a stick at</b>. They had the crowd in the palm of their hands and it was easy to tell they were all on a performance high that only they could understand because all of their hard work had finally come to fruition.
+                        </p>
+                    </blockquote>
+                    <p style='float: right;'>
+                        <a href="http://beatroute.ca/2014/12/05/black-phoenix-orchestra-open-air-cygnets-at-dickens-pub/" target="_blank">Beatroute - Nov 8, 2014</a>
+                    </p>
+                </div>
+                <div class="video">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/oUzj7WniLGc?wmode=transparent" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Shows Page-->
@@ -442,6 +482,11 @@
                     </div>
                 </div> -->
                 <div class='shows_container'>
+                    <div class='show'>
+                        <a href="https://www.facebook.com/events/842051845834291/" target="_blank">
+                            <img src="styles/img/venues/verns_logo.jpg" alt="Vern's Pub"></a>
+                        <p>February 21, 2015</p>
+                    </div>
                     <div class='show'>
                         <a href="http://www.limelightyyc.ca/" target="_blank">
                             <img src="styles/img/venues/limelight_logo.jpg" alt="Limelight Music Festival"></a>
@@ -520,33 +565,11 @@
             </div>
         </div>
 
-        <!--Press Page-->
-        <div id="press" style="display: none">
-            <div class="press">
-                <h1>WE'RE FAMOUS!</h1>
-                <div class="quotes">
-                    <blockquote>
-                        <p class="quote">
-                            [The] District Heat released their self-titled album that night and kicked the evening off with a bang, playing <i>bluesy rock</i> with <i>pop sensibility</i> and mixing in <b>more harmonies than The Beatles could shake a stick at</b>. They had the crowd in the palm of their hands and it was easy to tell they were all on a performance high that only they could understand because all of their hard work had finally come to fruition.
-                        </p>
-                    </blockquote>
-                    <p style='float: right;'>
-                        <a href="http://beatroute.ca/2014/12/05/black-phoenix-orchestra-open-air-cygnets-at-dickens-pub/" target="_blank">Beatroute - Nov 8, 2014</a>
-                    </p>
-                </div>
-                <div class="video">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/oUzj7WniLGc?wmode=transparent" frameborder="0"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!--Contact Page-->
         <div id="contact" style="display: none">
             <div class="contact">
                 <h1 id="wow" class="wow">GET IN TOUCH</h1>
-                <img src="styles/img/contact/the_band3.jpg" alt="The District Heat">
+                <img src="styles/img/contact/the_band.jpg" alt="The District Heat">
                 <div class="icons">
                     <div class='icon'>
                         <a href="mailto:thedistrictheat@gmail.com" target="_blank">

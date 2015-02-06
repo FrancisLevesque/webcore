@@ -1220,7 +1220,7 @@ $(document).ready(function() {
   }
 
   loadRequestedPage = function() {
-    if(document.URL.includes('#')) {
+    if(document.URL.indexOf('#') != -1) {
       url = document.URL;
       page = url.substring(url.lastIndexOf('#') + 1, url.length);
       pageName = page + 'Link';
@@ -1249,18 +1249,6 @@ $(document).ready(function() {
   $('.' + merch).click(function() {updatePage(merch)});
   $('.' + press).click(function() {updatePage(press)});
   $('.' + contact).click(function() {updatePage(contact)});
-
-  showLyrics = function (song) {
-    link = $('#menu').find('.selected').parent().attr('class');
-    old_page = $('.' + link).attr('href');
-    $(old_page).hide('slide', {direction: 'right'}, 500);
-    new_page = $('#mask');
-    setTimeout(function () {
-      $(new_page).show('slide', {direction: 'left'}, 500);
-    }, 500);
-  }
-
-  $('.maskLyrics').click(function() {showLyrics('mask')});
 
   $('.flexslider').flexslider({
     animation: "slide"
