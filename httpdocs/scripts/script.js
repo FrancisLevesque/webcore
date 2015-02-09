@@ -1238,6 +1238,7 @@ $(document).ready(function() {
   bio = 'bioLink'
   merch = 'merchLink'
   press = 'pressLink'
+  plot = 'plotLink'
   contact = 'contactLink'
 
   $('.' + home).click(function() {updatePage(home)});
@@ -1248,6 +1249,7 @@ $(document).ready(function() {
   $('.' + bio).click(function() {updatePage(bio)});
   $('.' + merch).click(function() {updatePage(merch)});
   $('.' + press).click(function() {updatePage(press)});
+  $('.' + plot).click(function() {updatePage(plot)});
   $('.' + contact).click(function() {updatePage(contact)});
 
   $('.flexslider').flexslider({
