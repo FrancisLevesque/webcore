@@ -326,10 +326,26 @@ a li {
 }
 
 /*MEDIA QUERY*/
-@media only screen and (max-height : 520px) {
+@media only screen and (max-height : 570px) {
 	a li {
 		padding-top: 22px;
 		padding-bottom: 22px;
+	}
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-height : 510px) {
+	a li {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-height : 470px) {
+	a li {
+		padding-top: 18px;
+		padding-bottom: 18px;
 	}
 }
 
