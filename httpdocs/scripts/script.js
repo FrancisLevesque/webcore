@@ -1232,6 +1232,7 @@ $(document).ready(function() {
 
   home = 'homeLink'
   music = 'musicLink'
+  videos = 'videosLink'
   lyrics = 'lyricsLink'
   shows = 'showsLink'
   blog = 'blogLink'
@@ -1243,6 +1244,7 @@ $(document).ready(function() {
 
   $('.' + home).click(function() {updatePage(home)});
   $('.' + music).click(function() {updatePage(music)});
+  $('.' + videos).click(function() {updatePage(videos)});
   $('.' + lyrics).click(function() {updatePage(lyrics)});
   $('.' + shows).click(function() {updatePage(shows)});
   $('.' + blog).click(function() {updatePage(blog)});
