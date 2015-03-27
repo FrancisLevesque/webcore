@@ -732,6 +732,20 @@ a li {
 	}
 }
 
+@media only screen and (max-width : 500px) {
+	#date {
+		float: none; 
+	}	
+
+	#title, #date { 
+		display: block;
+	}
+
+	.archive div div {
+		padding: 0 0;
+	}
+}
+
 /***************************************
 * Bio Styling
 ***************************************/
@@ -1013,11 +1027,9 @@ blockquote p {
 .footer {
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom: -2px;
 	height: 10px;
 	width: 100%;
-
-	background: #000;
 }
 
 .footer p {
